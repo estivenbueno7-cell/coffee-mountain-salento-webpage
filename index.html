@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Coffee Mountain Tours | Eje Cafetero Colombia</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --verde:#1b5e20;
+  --cafe:#5d4037;
+  --gris:#f5f5f5;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+/* HERO PRO */
+.hero{
+  height:100vh;
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:white;
+}
+
+.hero-slide{
+  position:absolute;
+  inset:0;
+  background-size:cover;
+  background-position:center;
+  opacity:0;
+  transition:opacity 1s ease;
+  transform:scale(1.05);
+}
+
+.hero-slide.active{opacity:1;}
+
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.55);
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  max-width:900px;
+  padding:20px;
+}
+
+.hero h1{
+  font-size:56px;
+  font-weight:700;
+}
+
+.hero p{
+  font-size:18px;
+  margin-top:10px;
+  opacity:0.9;
+}
+
+.hero-buttons{
+  margin-top:25px;
+  display:flex;
+  gap:15px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.btn{
+  padding:14px 22px;
+  border-radius:12px;
+  font-weight:600;
+  text-decoration:none;
+  display:inline-block;
+}
+
+.btn-primary{
+  background:var(--verde);
+  color:white;
+}
+
+.btn-secondary{
+  background:white;
+  color:var(--verde);
+}
+
+/* BENEFICIOS */
+.benefits{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+  padding:60px 10%;
+  background:white;
+}
+
+.benefit{
+  background:var(--gris);
+  padding:20px;
+  border-radius:15px;
+  text-align:center;
+}
+
+.benefit h3{
+  color:var(--verde);
+  margin-bottom:10px;
+}
+
+/* SECCIÓN */
+.section{
+  padding:70px 10%;
+  background:#fff;
+}
+
+.section h2{
+  text-align:center;
+  font-size:34px;
+  margin-bottom:40px;
+  color:var(--verde);
+}
+
+/* CARD PRO */
+.card{
+  background:white;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+  margin-bottom:40px;
+  transition:transform .3s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+}
+
+/* CAROUSEL PRO */
+.carousel{
+  position:relative;
+  aspect-ratio: 16 / 9;
+  overflow:hidden;
+}
+
+.carousel img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  display:none;
+}
+
+.carousel img.active{
+  display:block;
+}
+
+.nav-btn{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  background:rgba(0,0,0,0.45);
+  color:white;
+  border:none;
+  padding:10px 14px;
+  border-radius:50%;
+  cursor:pointer;
+}
+
+.prev{left:12px;}
+.next{right:12px;}
+
+/* CARD CONTENT */
+.card-content{
+  padding:22px;
+}
+
+.card-content h3{
+  color:var(--cafe);
+  font-size:20px;
+}
+
+.card-content p{
+  margin-top:8px;
+  color:#555;
+}
+
+/* CTA FINAL */
+.cta{
+  background:linear-gradient(90deg,var(--verde),var(--cafe));
+  color:white;
+  text-align:center;
+  padding:70px 10%;
+}
+
+.cta h2{
+  font-size:34px;
+}
+
+.cta a{
+  margin-top:20px;
+  display:inline-block;
+  background:white;
+  color:var(--verde);
+  padding:15px 25px;
+  border-radius:12px;
+  font-weight:700;
+  text-decoration:none;
+}
+
+/* WHATSAPP FLOAT */
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:white;
+  padding:15px 18px;
+  border-radius:50px;
+  font-weight:600;
+  text-decoration:none;
+  box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+  .hero h1{font-size:34px;}
+
+  .hero p{font-size:15px;}
+
+  .benefits{
+    grid-template-columns:1fr;
+    padding:40px 5%;
+  }
+
+  .section{padding:40px 5%;}
+
+  .section h2{font-size:26px;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+
+  <div class="hero-slide active" style="background-image:url('images/perfil.jpg')"></div>
+  <div class="hero-slide" style="background-image:url('images/cocora1.jpg')"></div>
+  <div class="hero-slide" style="background-image:url('images/salento9.jpg')"></div>
+  <div class="hero-slide" style="background-image:url('images/loscafetales.jpg')"></div>
+
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <h1>COFFEE MOUNTAIN TOURS</h1>
+    <p>Experiencias reales en el Eje Cafetero: Cocora, Café, Cascadas y Cabalgatas</p>
+
+    <div class="hero-buttons">
+      <a class="btn btn-primary" href="https://wa.me/573167149665">Reservar ahora</a>
+      <a class="btn btn-secondary" href="#tours">Ver tours</a>
+    </div>
+  </div>
+</div>
+
+<!-- BENEFICIOS -->
+<div class="benefits">
+  <div class="benefit">
+    <h3>🚐 Transporte incluido</h3>
+    <p>Recogida en Salento y zonas cercanas</p>
+  </div>
+
+  <div class="benefit">
+    <h3>🧭 Guía local</h3>
+    <p>Experiencia auténtica del Eje Cafetero</p>
+  </div>
+
+  <div class="benefit">
+    <h3>☕ Experiencia real</h3>
+    <p>Café, naturaleza y cultura local</p>
+  </div>
+</div>
+
+<!-- TOURS -->
+<div class="section" id="tours">
+<h2>Experiencias del Eje Cafetero</h2>
+
+<!-- CARD -->
+<div class="card">
+  <div class="carousel">
+    <img src="images/cocora4.jpg" class="active">
+    <img src="images/cocora6.jpg">
+    <img src="images/cocora1.jpg">
+
+    <button class="nav-btn prev" onclick="prevSlide(this)">‹</button>
+    <button class="nav-btn next" onclick="nextSlide(this)">›</button>
+  </div>
+
+  <div class="card-content">
+    <h3>🌄 Valle de Cocora</h3>
+    <p>Senderismo entre palmas de cera gigantes y naturaleza única.</p>
+  </div>
+</div>
+
+<!-- CARD -->
+<div class="card">
+  <div class="carousel">
+    <img src="images/santarita2.jpg" class="active">
+    <img src="images/santarita9.jpg">
+    <img src="images/copiyo.jpg">
+
+    <button class="nav-btn prev" onclick="prevSlide(this)">‹</button>
+    <button class="nav-btn next" onclick="nextSlide(this)">›</button>
+  </div>
+
+  <div class="card-content">
+    <h3>🌊 Cascadas de Santa Rita</h3>
+    <p>Aventura en selva, ríos cristalinos y senderos naturales.</p>
+  </div>
+</div>
+
+</div>
+
+<!-- CTA -->
+<div class="cta">
+  <h2>¿Listo para vivir el Eje Cafetero?</h2>
+  <p>Reserva tu experiencia ahora con guía local y transporte incluido</p>
+  <a href="https://wa.me/573167149665">Hablar por WhatsApp</a>
+</div>
+
+<a class="whatsapp" href="https://wa.me/573167149665">WhatsApp</a>
+
+<script>
+
+// HERO
+let slides = document.querySelectorAll(".hero-slide");
+let index = 0;
+
+setInterval(()=>{
+  slides[index].classList.remove("active");
+  index = (index+1)%slides.length;
+  slides[index].classList.add("active");
+},4000);
+
+// CAROUSEL
+function nextSlide(btn){
+  const c = btn.parentElement;
+  let imgs = c.querySelectorAll("img");
+  let i = [...imgs].findIndex(x => x.classList.contains("active"));
+  imgs[i].classList.remove("active");
+  imgs[(i+1)%imgs.length].classList.add("active");
+}
+
+function prevSlide(btn){
+  const c = btn.parentElement;
+  let imgs = c.querySelectorAll("img");
+  let i = [...imgs].findIndex(x => x.classList.contains("active"));
+  imgs[i].classList.remove("active");
+  imgs[(i-1+imgs.length)%imgs.length].classList.add("active");
+}
+
+</script>
+
+</body>
+</html>
