@@ -6,13 +6,12 @@
 
 <title>Coffee Mountain Tours | Eje Cafetero Colombia</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 :root{
   --verde:#1b5e20;
   --cafe:#5d4037;
-  --gris:#f5f5f5;
 }
 
 *{
@@ -22,7 +21,7 @@
   font-family:'Poppins',sans-serif;
 }
 
-/* HERO PRO */
+/* HERO */
 .hero{
   height:100vh;
   position:relative;
@@ -40,16 +39,19 @@
   background-size:cover;
   background-position:center;
   opacity:0;
-  transition:opacity 1s ease;
+  transition:opacity 1s ease-in-out;
   transform:scale(1.05);
 }
 
-.hero-slide.active{opacity:1;}
+.hero-slide.active{
+  opacity:1;
+}
 
 .hero-overlay{
   position:absolute;
   inset:0;
   background:rgba(0,0,0,0.55);
+  z-index:1;
 }
 
 .hero-content{
@@ -60,93 +62,50 @@
 }
 
 .hero h1{
-  font-size:56px;
-  font-weight:700;
+  font-size:54px;
 }
 
 .hero p{
   font-size:18px;
   margin-top:10px;
-  opacity:0.9;
-}
-
-.hero-buttons{
-  margin-top:25px;
-  display:flex;
-  gap:15px;
-  justify-content:center;
-  flex-wrap:wrap;
 }
 
 .btn{
-  padding:14px 22px;
-  border-radius:12px;
-  font-weight:600;
-  text-decoration:none;
   display:inline-block;
-}
-
-.btn-primary{
+  margin-top:25px;
+  padding:15px 25px;
   background:var(--verde);
   color:white;
+  border-radius:12px;
+  text-decoration:none;
+  font-weight:600;
 }
 
-.btn-secondary{
-  background:white;
-  color:var(--verde);
-}
-
-/* BENEFICIOS */
-.benefits{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-  padding:60px 10%;
-  background:white;
-}
-
-.benefit{
-  background:var(--gris);
-  padding:20px;
-  border-radius:15px;
-  text-align:center;
-}
-
-.benefit h3{
-  color:var(--verde);
-  margin-bottom:10px;
-}
-
-/* SECCIÓN */
+/* SECTION */
 .section{
   padding:70px 10%;
-  background:#fff;
 }
 
 .section h2{
   text-align:center;
-  font-size:34px;
+  font-size:36px;
   margin-bottom:40px;
   color:var(--verde);
 }
 
-/* CARD PRO */
+/* CARD */
 .card{
   background:white;
-  border-radius:18px;
+  border-radius:15px;
   overflow:hidden;
-  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
   margin-bottom:40px;
-  transition:transform .3s;
 }
 
-.card:hover{
-  transform:translateY(-5px);
-}
-
-/* CAROUSEL PRO */
+/* CAROUSEL (CORREGIDO PRO) */
 .carousel{
   position:relative;
+  width:100%;
   aspect-ratio: 16 / 9;
   overflow:hidden;
 }
@@ -163,51 +122,41 @@
   display:block;
 }
 
-.nav-btn{
+/* BOTONES CAROUSEL */
+.prev,.next{
   position:absolute;
   top:50%;
   transform:translateY(-50%);
-  background:rgba(0,0,0,0.45);
+  background:rgba(0,0,0,0.5);
   color:white;
   border:none;
-  padding:10px 14px;
+  padding:10px;
   border-radius:50%;
   cursor:pointer;
 }
 
-.prev{left:12px;}
-.next{right:12px;}
+.prev{left:10px;}
+.next{right:10px;}
 
-/* CARD CONTENT */
 .card-content{
-  padding:22px;
+  padding:20px;
 }
 
-.card-content h3{
+.card h3{
   color:var(--cafe);
-  font-size:20px;
 }
 
-.card-content p{
-  margin-top:8px;
-  color:#555;
-}
-
-/* CTA FINAL */
+/* CTA */
 .cta{
   background:linear-gradient(90deg,var(--verde),var(--cafe));
   color:white;
   text-align:center;
-  padding:70px 10%;
-}
-
-.cta h2{
-  font-size:34px;
+  padding:60px 10%;
 }
 
 .cta a{
-  margin-top:20px;
   display:inline-block;
+  margin-top:20px;
   background:white;
   color:var(--verde);
   padding:15px 25px;
@@ -216,7 +165,7 @@
   text-decoration:none;
 }
 
-/* WHATSAPP FLOAT */
+/* WHATSAPP */
 .whatsapp{
   position:fixed;
   bottom:20px;
@@ -227,24 +176,40 @@
   border-radius:50px;
   font-weight:600;
   text-decoration:none;
-  box-shadow:0 10px 20px rgba(0,0,0,0.2);
 }
 
 /* RESPONSIVE */
-@media(max-width:768px){
+@media (max-width: 768px){
 
-  .hero h1{font-size:34px;}
+  .hero h1{
+    font-size:34px;
+  }
 
-  .hero p{font-size:15px;}
+  .hero p{
+    font-size:15px;
+    padding:0 10px;
+  }
 
-  .benefits{
-    grid-template-columns:1fr;
+  .section{
     padding:40px 5%;
   }
 
-  .section{padding:40px 5%;}
+  .section h2{
+    font-size:26px;
+  }
 
-  .section h2{font-size:26px;}
+  .card-content h3{
+    font-size:18px;
+  }
+
+  .card-content p{
+    font-size:14px;
+  }
+
+  .btn{
+    padding:12px 18px;
+    font-size:14px;
+  }
 }
 </style>
 </head>
@@ -255,101 +220,106 @@
 <div class="hero">
 
   <div class="hero-slide active" style="background-image:url('images/perfil.jpg')"></div>
-  <div class="hero-slide" style="background-image:url('images/cocora1.jpg')"></div>
   <div class="hero-slide" style="background-image:url('images/salento9.jpg')"></div>
+  <div class="hero-slide" style="background-image:url('images/cocora1.jpg')"></div>
   <div class="hero-slide" style="background-image:url('images/loscafetales.jpg')"></div>
 
   <div class="hero-overlay"></div>
 
   <div class="hero-content">
     <h1>COFFEE MOUNTAIN TOURS</h1>
-    <p>Experiencias reales en el Eje Cafetero: Cocora, Café, Cascadas y Cabalgatas</p>
-
-    <div class="hero-buttons">
-      <a class="btn btn-primary" href="https://wa.me/573167149665">Reservar ahora</a>
-      <a class="btn btn-secondary" href="#tours">Ver tours</a>
-    </div>
-  </div>
-</div>
-
-<!-- BENEFICIOS -->
-<div class="benefits">
-  <div class="benefit">
-    <h3>🚐 Transporte incluido</h3>
-    <p>Recogida en Salento y zonas cercanas</p>
+    <p>Valle de Cocora • Café • Filandia • Salento • Cascadas • Cabalgatas</p>
+    <a class="btn" href="https://wa.me/573167149665">Reservar por WhatsApp</a>
   </div>
 
-  <div class="benefit">
-    <h3>🧭 Guía local</h3>
-    <p>Experiencia auténtica del Eje Cafetero</p>
-  </div>
-
-  <div class="benefit">
-    <h3>☕ Experiencia real</h3>
-    <p>Café, naturaleza y cultura local</p>
-  </div>
 </div>
 
 <!-- TOURS -->
-<div class="section" id="tours">
-<h2>Experiencias del Eje Cafetero</h2>
+<div class="section">
+<h2>🏔️ Experiencias del Eje Cafetero</h2>
 
-<!-- CARD -->
+<!-- COCORA -->
 <div class="card">
-  <div class="carousel">
-    <img src="images/cocora4.jpg" class="active">
-    <img src="images/cocora6.jpg">
-    <img src="images/cocora1.jpg">
-
-    <button class="nav-btn prev" onclick="prevSlide(this)">‹</button>
-    <button class="nav-btn next" onclick="nextSlide(this)">›</button>
-  </div>
-
-  <div class="card-content">
-    <h3>🌄 Valle de Cocora</h3>
-    <p>Senderismo entre palmas de cera gigantes y naturaleza única.</p>
-  </div>
+<div class="carousel">
+<img src="images/cocora.lo.jpg" class="active">
+<img src="images/cocora4.jpg">
+<img src="images/cocora6.jpg">
+<img src="images/xBy-iSleJdkewKpL36A4z2tsPehFIp9KBXoe1Fg7nh98XGr98KQu0JI9TAxrxKOqDZR0VEEy9RPLNQVJasHx-QvFPKh4Js-6OjApwpwn3b0NFU81e2XsQ1nc7PCOMH-oJBRKSZuIZsKXWcSbC4J31JRv1pMDOVtOYLvmbfWBrDHs8BOeoWfCGHmKJFG2s.jpg">
+<button class="prev" onclick="prevSlide(this)">‹</button>
+<button class="next" onclick="nextSlide(this)">›</button>
+</div>
+<div class="card-content">
+<h3>🌄 Valle de Cocora (3 - 6 horas)</h3>
+<p>Senderismo entre palmas de cera gigantes y naturaleza única.</p>
+</div>
 </div>
 
-<!-- CARD -->
+<!-- CABALGATA -->
 <div class="card">
-  <div class="carousel">
-    <img src="images/santarita2.jpg" class="active">
-    <img src="images/santarita9.jpg">
-    <img src="images/copiyo.jpg">
+<div class="carousel">
+<img src="images/cablgata11.jpg" class="active">
+<img src="images/cablgata2.jpg">
+<img src="images/cabalta3.jpg">
+<button class="prev" onclick="prevSlide(this)">‹</button>
+<button class="next" onclick="nextSlide(this)">›</button>
+</div>
+<div class="card-content">
+<h3>🐎 Cabalgata Cocora - Salento</h3>
+<p>Recorrido a caballo por montañas y cafetales.</p>
+</div>
+</div>
 
-    <button class="nav-btn prev" onclick="prevSlide(this)">‹</button>
-    <button class="nav-btn next" onclick="nextSlide(this)">›</button>
-  </div>
+<!-- SANTA RITA -->
+<div class="card">
+<div class="carousel">
+<img src="images/copiyo.jpg" class="active">
+<img src="images/santarita2.jpg">
+<img src="images/santarita9.jpg">
+<button class="prev" onclick="prevSlide(this)">‹</button>
+<button class="next" onclick="nextSlide(this)">›</button>
+</div>
+<div class="card-content">
+<h3>🌊 Cascadas de Santa Rita</h3>
+<p>Aventura en selva, agua cristalina y senderos naturales.</p>
+</div>
+</div>
 
-  <div class="card-content">
-    <h3>🌊 Cascadas de Santa Rita</h3>
-    <p>Aventura en selva, ríos cristalinos y senderos naturales.</p>
-  </div>
+<!-- COFFEE TOUR -->
+<div class="card">
+<div class="carousel">
+<img src="images/coffetours.png" class="active">
+<img src="images/coffetour.png">
+<img src="images/coffe.jpg">
+<button class="prev" onclick="prevSlide(this)">‹</button>
+<button class="next" onclick="nextSlide(this)">›</button>
+</div>
+<div class="card-content">
+<h3>☕ Coffee Tour Premium</h3>
+<p>Experiencia completa del café: cultivo, proceso y degustación.</p>
+</div>
 </div>
 
 </div>
 
 <!-- CTA -->
 <div class="cta">
-  <h2>¿Listo para vivir el Eje Cafetero?</h2>
-  <p>Reserva tu experiencia ahora con guía local y transporte incluido</p>
-  <a href="https://wa.me/573167149665">Hablar por WhatsApp</a>
+<h2>🚐 Vive el Eje Cafetero con Coffee Mountain Tours</h2>
+<p>Experiencias auténticas con transporte privado y guías locales</p>
+<a href="https://wa.me/573167149665">Reservar ahora</a>
 </div>
 
 <a class="whatsapp" href="https://wa.me/573167149665">WhatsApp</a>
 
 <script>
-
-// HERO
+// HERO SLIDER
 let slides = document.querySelectorAll(".hero-slide");
 let index = 0;
 
-setInterval(()=>{
+setInterval(() => {
   slides[index].classList.remove("active");
-  index = (index+1)%slides.length;
+  index = (index + 1) % slides.length;
   slides[index].classList.add("active");
-},4000);
+}, 4000);
 
 // CAROUSEL
 function nextSlide(btn){
@@ -357,7 +327,8 @@ function nextSlide(btn){
   let imgs = c.querySelectorAll("img");
   let i = [...imgs].findIndex(x => x.classList.contains("active"));
   imgs[i].classList.remove("active");
-  imgs[(i+1)%imgs.length].classList.add("active");
+  i = (i + 1) % imgs.length;
+  imgs[i].classList.add("active");
 }
 
 function prevSlide(btn){
@@ -365,9 +336,9 @@ function prevSlide(btn){
   let imgs = c.querySelectorAll("img");
   let i = [...imgs].findIndex(x => x.classList.contains("active"));
   imgs[i].classList.remove("active");
-  imgs[(i-1+imgs.length)%imgs.length].classList.add("active");
+  i = (i - 1 + imgs.length) % imgs.length;
+  imgs[i].classList.add("active");
 }
-
 </script>
 
 </body>
