@@ -14,360 +14,8 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 
-  <style>
-    *{margin:0;padding:0;box-sizing:border-box;font-family:"Inter",sans-serif;}
-
-    body{
-      background:#f5f7f2;
-      color:#1c1c1c;
-      scroll-behavior:smooth;
-    }
-
-    /* NAV */
-    .nav{
-      position:fixed;
-      top:0;
-      width:100%;
-      background:rgba(0,0,0,0.6);
-      backdrop-filter:blur(10px);
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      padding:15px 40px;
-      z-index:999;
-    }
-
-    .nav h2{color:white;font-family:"Poppins";}
-    .nav a{color:white;margin-left:20px;text-decoration:none;}
-    .nav a:hover{color:#25D366;}
-
-    /* HERO PRO */
-    .hero{
-      height:100vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      position:relative;
-      color:white;
-      background-size:cover;
-      background-position:center;
-      animation: heroBG 18s infinite;
-    }
-
-    @keyframes heroBG{
-      0%{background-image:url("images/cocora6.jpg");}
-      33%{background-image:url("images/loscafetales.jpg");}
-      66%{background-image:url("images/salento.jpg");}
-      100%{background-image:url("images/cocora6.jpg");}
-    }
-
-    .hero::after{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:linear-gradient(180deg,rgba(0,0,0,0.4),rgba(0,0,0,0.85));
-    }
-
-    .hero-content{position:relative;z-index:2;max-width:800px;}
-
-    .hero h1{font-size:3rem;font-family:"Poppins";}
-    .hero p{margin:15px 0;opacity:0.9;}
-
-    .btn{
-      display:inline-block;
-      padding:12px 22px;
-      border-radius:30px;
-      text-decoration:none;
-      font-weight:600;
-      margin:10px;
-      transition:0.3s;
-    }
-
-    .btn-green{background:#25D366;color:white;}
-    .btn-white{background:white;color:black;}
-    .btn:hover{transform:scale(1.05);}
-
-    /* SECTIONS */
-    section{
-      padding:90px 20px;
-      max-width:1200px;
-      margin:auto;
-    }
-
-    h2{
-      text-align:center;
-      font-family:"Poppins";
-      margin-bottom:40px;
-    }
-
-    /* BADGES */
-    .badges{
-      display:flex;
-      justify-content:center;
-      flex-wrap:wrap;
-      gap:10px;
-      margin-top:15px;
-    }
-
-    .badge{
-      background:rgba(0,0,0,0.08);
-      padding:6px 12px;
-      border-radius:20px;
-      font-size:0.8rem;
-    }
-
-    /* GRID */
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:20px;
-    }
-
-    .card{
-      background:white;
-      border-radius:16px;
-      overflow:hidden;
-      box-shadow:0 10px 25px rgba(0,0,0,0.08);
-      transition:0.3s;
-    }
-
-    .card:hover{transform:translateY(-8px);}
-
-    .card img{
-      width:100%;
-      height:200px;
-      object-fit:cover;
-    }
-
-    .card-content{padding:18px;}
-
-    .price{
-      color:#1b5e20;
-      font-weight:700;
-      margin:10px 0;
-    }
-
-    /* FEATURES */
-    .features{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-      gap:15px;
-      text-align:center;
-    }
-
-    .feature{
-      background:white;
-      padding:20px;
-      border-radius:12px;
-    }
-
-    /* FORM */
-    .form{
-      background:white;
-      padding:25px;
-      border-radius:12px;
-      max-width:600px;
-      margin:auto;
-    }
-
-    .form input,.form select{
-      width:100%;
-      padding:12px;
-      margin:8px 0;
-      border-radius:10px;
-      border:1px solid #ddd;
-    }
-
-    /* FOOTER */
-    .footer{
-      background:#0b0f0c;
-      color:white;
-      padding:60px 20px 20px;
-    }
-
-    .footer-container{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-      gap:30px;
-      max-width:1200px;
-      margin:auto;
-    }
-
-    .footer a{
-      color:white;
-      text-decoration:none;
-      display:block;
-      margin:6px 0;
-      opacity:0.8;
-    }
-
-    .footer a:hover{color:#25D366;}
-
-    .footer-bottom{
-      text-align:center;
-      margin-top:40px;
-      opacity:0.6;
-      font-size:0.85rem;
-    }
-
-    /* WhatsApp */
-    .wa{
-      position:fixed;
-      bottom:20px;
-      right:20px;
-      background:#25D366;
-      color:white;
-      padding:15px;
-      border-radius:50%;
-      font-size:20px;
-      text-decoration:none;
-    }
-    .reservation-section{
-  padding: 80px 20px;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-  color: white;
-  text-align: center;
-}
-
-.reservation-container{
-  max-width: 600px;
-  margin: auto;
-}
-
-.subtitle{
-  opacity: 0.8;
-  margin-bottom: 30px;
-}
-
-.reservation-form{
-  background: rgba(255,255,255,0.08);
-  padding: 25px;
-  border-radius: 15px;
-  backdrop-filter: blur(10px);
-}
-
-.form-group{
-  text-align: left;
-  margin-bottom: 15px;
-}
-
-.form-group input,
-.form-group select{
-  width: 100%;
-  padding: 12px;
-  border-radius: 8px;
-  border: none;
-  margin-top: 5px;
-}
-
-.premium-btn{
-  display: inline-block;
-  margin-top: 15px;
-  padding: 14px;
-  width: 100%;
-  font-weight: bold;
-  text-align: center;
-  border-radius: 10px;
-  background: #25D366;
-  color: white;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.premium-btn:hover{
-  transform: scale(1.03);
-}/*==========================
-      TESTIMONIOS
-===========================*/
-
-#testimonios{
-    padding:90px 20px;
-    background:#f8faf7;
-}
-
-.testimonios-subtitulo{
-    text-align:center;
-    color:#666;
-    max-width:700px;
-    margin:0 auto 50px;
-    font-size:17px;
-}
-
-.testimonials-grid{
-
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    gap:30px;
-
-}
-
-.testimonial-card{
-
-    background:white;
-    border-radius:18px;
-    padding:28px;
-    box-shadow:0 15px 35px rgba(0,0,0,.08);
-    transition:.35s;
-
-}
-
-.testimonial-card:hover{
-
-    transform:translateY(-8px);
-
-}
-
-.stars{
-
-    color:#FFC107;
-    font-size:20px;
-    margin-bottom:18px;
-
-}
-
-.testimonial-card p{
-
-    color:#555;
-    line-height:1.8;
-    margin-bottom:25px;
-
-}
-
-.client{
-
-    display:flex;
-    align-items:center;
-    gap:15px;
-
-}
-
-.client img{
-
-    width:65px;
-    height:65px;
-    border-radius:50%;
-    object-fit:cover;
-    border:3px solid #25D366;
-
-}
-
-.client h4{
-
-    margin:0;
-    font-size:17px;
-
-}
-
-.client span{
-
-    color:#777;
-    font-size:14px;
-
-}
-
-  </style>
 </head>
 
 <body>
@@ -413,6 +61,7 @@
         <h3>Cascadas Santa Rita</h3>
         <p>Senderos ecológicos, túneles naturales y piscinas cristalinas en la montaña.</p>
         <div class="price">$160.000 COP | 3h</div>
+        <button onclick="openModal(tours.cascadas_santa_rita)">Ver detalles</button>
         <a class="btn btn-green" href="https://wa.me/573117388259?text=Quiero%20Santa%20Rita">Reservar</a>
       </div>
     </div>
@@ -421,8 +70,10 @@
       <img src="images/cocora6.jpg">
       <div class="card-content">
         <h3>Cascadas de Cocora</h3>
+        
         <p>Caminata en bosque nublado con cascadas ocultas y naturaleza virgen.</p>
-        <div class="price">$220.000 COP | 4-5h</div>
+        <div class="price">$250.000 COP | 4-5h</div>
+        <button onclick="openModal(tours.cocora)">Ver detalles</button>
         <a class="btn btn-green" href="https://wa.me/573117388259?text=Cascadas%20Cocora">Reservar</a>
       </div>
     </div>
@@ -439,6 +90,7 @@
         <h3>Cocora 3 horas</h3>
         <p> transporte en wilys Ruta corta con palmas de cera y miradores principales.</p>
         <div class="price">$150.000 COP</div>
+        <button onclick="openModal(tours.cocora3h)">Ver detalles</button>
         <a class="btn btn-green" href="https://wa.me/573117388259?text=Cocora%203%20horas">Reservar</a>
       </div>
     </div>
@@ -449,6 +101,7 @@
         <h3>Cocora 6 horas</h3>
         <p>Ruta completa de la casa de los colibri con bosque nublado, río,miradores altos y puntes colgantes.</p>
         <div class="price">$260.000 COP</div>
+        <button onclick="openModal(tours.cocora6h)">Ver detalles</button>
         <a class="btn btn-green" href="https://wa.me/573117388259?text=Cocora%206%20horas">Reservar</a>
       </div>
     </div>
@@ -459,6 +112,7 @@
         <h3>Cocora 3 horas + Cabalgata</h3>
         <p>Aventura a caballo entre montañas y paisajes del valle de cocora.</p>
         <div class="price">$240.000 COP</div>
+        <button onclick="openModal(tours.cabalgata_cocora)">Ver detalles</button>
         <a class="btn btn-green" href="https://wa.me/573117388259?text=Cocora%20Cabalgata">Reservar</a>
       </div>
     </div>
@@ -470,11 +124,12 @@
   <div class="grid">
 
     <div class="card">
-      <img src="images/coffetours.png">
+      <img src="images/Captura de pantalla 2026-06-29 135718.png">
       <div class="card-content">
         <h3>Coffee Tour Tradicional</h3>
         <p>Experiencia local: cultivo, recolección y proceso artesanal del cafe del café visita la plantacion de la mano de un experto.</p>
         <div class="price">$100.000 COP</div>
+        <button onclick="openModal(tours.cocora)">Ver detalles</button>
         <a class="btn btn-green" href="https://wa.me/573117388259?text=Coffee%20Tradicional">Reservar</a>
       </div>
     </div>
@@ -485,6 +140,7 @@
         <h3>Coffee Tour Premium</h3>
         <p>Proceso completo del café especial con tostión y degustación profesional.</p>
         <div class="price">$170.000 COP</div>
+        <button onclick="openModal(tours.coffee_premium_2)">Ver detalles</button>
         <a class="btn btn-green" href="https://wa.me/573117388259?text=Coffee%20Premium">Reservar</a>
       </div>
     </div>
@@ -501,6 +157,7 @@
         <h3>Salento + Cocora + Filandia</h3>
         <p>Un día completo: pueblos mágicos + valle de Cocora + miradores de Filandia.</p>
         <div class="price">$320.000 COP | Día completo</div>
+        <button onclick="openModal(tours.cocora)">Ver detalles</button>
         <a class="btn btn-green" href="https://wa.me/573117388259?text=Combo%20Salento%20Cocora%20Filandia">Reservar</a>
       </div>
     </div>
@@ -511,6 +168,7 @@
         <h3>Cocora + Coffee Tour - 6 horas</h3>
         <p>Montaña + café en una sola experiencia completa del Eje Cafetero.</p>
         <div class="price">$290.000 COP</div>
+        <button onclick="openModal(tours.salento00)">Ver detalles</button>
         <a class="btn btn-green" href="https://wa.me/573117388259?text=Cocora%20Coffee%20Tour">Reservar</a>
       </div>
     </div>
@@ -698,6 +356,45 @@ document.getElementById("whatsappBtn").addEventListener("click", function () {
 <script>
   AOS.init({duration:900});
 </script>
+<div id="tourModal" class="modal">
+  <div class="modal-content">
 
+    <span class="close" onclick="closeModal()">&times;</span>
+
+    <!-- CARRUSEL -->
+    <div class="carousel">
+      <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+
+      <img id="mainImage" src="" alt="Tour imagen">
+
+      <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+
+    <!-- MINIATURAS -->
+    <div class="thumbnails" id="thumbnails"></div>
+
+    <!-- INFO -->
+    <div class="tour-info">
+      <h2 id="tourTitle"></h2>
+
+      <p id="tourDescription"></p>
+
+      <h3>Qué incluye</h3>
+      <ul id="includes"></ul>
+
+      <h3>Qué no incluye</h3>
+      <ul id="notIncludes"></ul>
+
+      <h3>Itinerario</h3>
+      <p id="itinerary"></p>
+
+      <a id="whatsappBtn" target="_blank" class="whatsapp-btn">
+        Reservar por WhatsApp
+      </a>
+    </div>
+
+  </div>
+</div>
+<script src="app.js"></script>
 </body>
 </html>

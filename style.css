@@ -1,0 +1,460 @@
+    *{margin:0;padding:0;box-sizing:border-box;font-family:"Inter",sans-serif;}
+
+    body{
+      background:#f5f7f2;
+      color:#1c1c1c;
+      scroll-behavior:smooth;
+    }
+
+    /* NAV */
+    .nav{
+      position:fixed;
+      top:0;
+      width:100%;
+      background:rgba(0,0,0,0.6);
+      backdrop-filter:blur(10px);
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:15px 40px;
+      z-index:999;
+    }
+
+    .nav h2{color:white;font-family:"Poppins";}
+    .nav a{color:white;margin-left:20px;text-decoration:none;}
+    .nav a:hover{color:#25D366;}
+
+    /* HERO PRO */
+    .hero{
+      height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      position:relative;
+      color:white;
+      background-size:cover;
+      background-position:center;
+      animation: heroBG 18s infinite;
+    }
+
+    @keyframes heroBG{
+      0%{background-image:url("images/cocora6.jpg");}
+      33%{background-image:url("images/loscafetales.jpg");}
+      66%{background-image:url("images/salento.jpg");}
+      100%{background-image:url("images/cocora6.jpg");}
+    }
+
+    .hero::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(180deg,rgba(0,0,0,0.4),rgba(0,0,0,0.85));
+    }
+
+    .hero-content{position:relative;z-index:2;max-width:800px;}
+
+    .hero h1{font-size:3rem;font-family:"Poppins";}
+    .hero p{margin:15px 0;opacity:0.9;}
+
+    .btn{
+      display:inline-block;
+      padding:12px 22px;
+      border-radius:30px;
+      text-decoration:none;
+      font-weight:600;
+      margin:10px;
+      transition:0.3s;
+    }
+
+    .btn-green{background:#25D366;color:white;}
+    .btn-white{background:white;color:black;}
+    .btn:hover{transform:scale(1.05);}
+
+    /* SECTIONS */
+    section{
+      padding:90px 20px;
+      max-width:1200px;
+      margin:auto;
+    }
+
+    h2{
+      text-align:center;
+      font-family:"Poppins";
+      margin-bottom:40px;
+    }
+
+    /* BADGES */
+    .badges{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:15px;
+    }
+
+    .badge{
+      background:rgba(0,0,0,0.08);
+      padding:6px 12px;
+      border-radius:20px;
+      font-size:0.8rem;
+    }
+
+    /* GRID */
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:20px;
+    }
+
+    .card{
+      background:white;
+      border-radius:16px;
+      overflow:hidden;
+      box-shadow:0 10px 25px rgba(0,0,0,0.08);
+      transition:0.3s;
+    }
+
+    .card:hover{transform:translateY(-8px);}
+
+    .card img{
+      width:100%;
+      height:200px;
+      object-fit:cover;
+    }
+
+    .card-content{padding:18px;}
+
+    .price{
+      color:#1b5e20;
+      font-weight:700;
+      margin:10px 0;
+    }
+
+    /* FEATURES */
+    .features{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+      gap:15px;
+      text-align:center;
+    }
+
+    .feature{
+      background:white;
+      padding:20px;
+      border-radius:12px;
+    }
+
+    /* FORM */
+    .form{
+      background:white;
+      padding:25px;
+      border-radius:12px;
+      max-width:600px;
+      margin:auto;
+    }
+
+    .form input,.form select{
+      width:100%;
+      padding:12px;
+      margin:8px 0;
+      border-radius:10px;
+      border:1px solid #ddd;
+    }
+
+    /* FOOTER */
+    .footer{
+      background:#0b0f0c;
+      color:white;
+      padding:60px 20px 20px;
+    }
+
+    .footer-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:30px;
+      max-width:1200px;
+      margin:auto;
+    }
+
+    .footer a{
+      color:white;
+      text-decoration:none;
+      display:block;
+      margin:6px 0;
+      opacity:0.8;
+    }
+
+    .footer a:hover{color:#25D366;}
+
+    .footer-bottom{
+      text-align:center;
+      margin-top:40px;
+      opacity:0.6;
+      font-size:0.85rem;
+    }
+
+    /* WhatsApp */
+    .wa{
+      position:fixed;
+      bottom:20px;
+      right:20px;
+      background:#25D366;
+      color:white;
+      padding:15px;
+      border-radius:50%;
+      font-size:20px;
+      text-decoration:none;
+    }
+    .reservation-section{
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
+  text-align: center;
+}
+
+.reservation-container{
+  max-width: 600px;
+  margin: auto;
+}
+
+.subtitle{
+  opacity: 0.8;
+  margin-bottom: 30px;
+}
+
+.reservation-form{
+  background: rgba(255,255,255,0.08);
+  padding: 25px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+}
+
+.form-group{
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.form-group input,
+.form-group select{
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  margin-top: 5px;
+}
+
+.premium-btn{
+  display: inline-block;
+  margin-top: 15px;
+  padding: 14px;
+  width: 100%;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 10px;
+  background: #25D366;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.premium-btn:hover{
+  transform: scale(1.03);
+}/*==========================
+      TESTIMONIOS
+===========================*/
+
+#testimonios{
+    padding:90px 20px;
+    background:#f8faf7;
+}
+
+.testimonios-subtitulo{
+    text-align:center;
+    color:#666;
+    max-width:700px;
+    margin:0 auto 50px;
+    font-size:17px;
+}
+
+.testimonials-grid{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+
+}
+
+.testimonial-card{
+
+    background:white;
+    border-radius:18px;
+    padding:28px;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+    transition:.35s;
+
+}
+
+.testimonial-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.stars{
+
+    color:#FFC107;
+    font-size:20px;
+    margin-bottom:18px;
+
+}
+
+.testimonial-card p{
+
+    color:#555;
+    line-height:1.8;
+    margin-bottom:25px;
+
+}
+
+.client{
+
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+}
+
+.client img{
+
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    object-fit:cover;
+    border:3px solid #25D366;
+
+}
+
+.client h4{
+
+    margin:0;
+    font-size:17px;
+
+}
+
+.client span{
+
+    color:#777;
+    font-size:14px;
+
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  overflow: auto;
+}
+
+.modal-content {
+  background: #fff;
+  margin: 3% auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 900px;
+  border-radius: 15px;
+}
+
+.close {
+  float: right;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.carousel {
+  position: relative;
+  text-align: center;
+}
+
+.carousel img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 45%;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  font-size: 25px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.thumbnails {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.thumbnails img {
+  width: 70px;
+  height: 50px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 6px;
+  opacity: 0.6;
+}
+
+.thumbnails img.active {
+  border: 2px solid #00c853;
+  opacity: 1;
+}
+
+.tour-info {
+  margin-top: 20px;
+}
+
+.whatsapp-btn {
+  display: block;
+  background: #25D366;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  margin-top: 15px;
+  font-weight: bold;
+}
+button {
+  background: linear-gradient(135deg, #00c853, #00b0ff);
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+button:active {
+  transform: scale(0.97);
+}
