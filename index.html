@@ -1,344 +1,702 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="keywords" content="Tours Salento, Coffee Tour Salento, Valle de Cocora Tour, Quindío Tours, Coffee Farm Tour Colombia, Salento Colombia, Eje Cafetero Tours">
+  <meta name="description" content="Descubre los mejores tours en Salento, Valle de Cocora y Coffee Tours en el Quindío. Guías bilingües, transporte incluido y reserva fácil por WhatsApp.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta property="og:title" content="Coffee Mountain | Tours en Salento">
+  <meta property="og:description" content="Experiencias auténticas en el Eje Cafetero. Coffee Tours, Valle de Cocora, Cascadas Santa Rita y mucho más.">
+  <meta property="og:image" content="https://tudominio.com/images/hero.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tudominio.com">
+  <title>Coffee Mountain | Tours en Salento, Valle de Cocora y Coffee Tours en Quindío</title>
 
-<title>Coffee Mountain Tours | Eje Cafetero Colombia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:"Inter",sans-serif;}
 
-<style>
-:root{
-  --verde:#1b5e20;
-  --cafe:#5d4037;
+    body{
+      background:#f5f7f2;
+      color:#1c1c1c;
+      scroll-behavior:smooth;
+    }
+
+    /* NAV */
+    .nav{
+      position:fixed;
+      top:0;
+      width:100%;
+      background:rgba(0,0,0,0.6);
+      backdrop-filter:blur(10px);
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:15px 40px;
+      z-index:999;
+    }
+
+    .nav h2{color:white;font-family:"Poppins";}
+    .nav a{color:white;margin-left:20px;text-decoration:none;}
+    .nav a:hover{color:#25D366;}
+
+    /* HERO PRO */
+    .hero{
+      height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      position:relative;
+      color:white;
+      background-size:cover;
+      background-position:center;
+      animation: heroBG 18s infinite;
+    }
+
+    @keyframes heroBG{
+      0%{background-image:url("images/cocora6.jpg");}
+      33%{background-image:url("images/loscafetales.jpg");}
+      66%{background-image:url("images/salento.jpg");}
+      100%{background-image:url("images/cocora6.jpg");}
+    }
+
+    .hero::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(180deg,rgba(0,0,0,0.4),rgba(0,0,0,0.85));
+    }
+
+    .hero-content{position:relative;z-index:2;max-width:800px;}
+
+    .hero h1{font-size:3rem;font-family:"Poppins";}
+    .hero p{margin:15px 0;opacity:0.9;}
+
+    .btn{
+      display:inline-block;
+      padding:12px 22px;
+      border-radius:30px;
+      text-decoration:none;
+      font-weight:600;
+      margin:10px;
+      transition:0.3s;
+    }
+
+    .btn-green{background:#25D366;color:white;}
+    .btn-white{background:white;color:black;}
+    .btn:hover{transform:scale(1.05);}
+
+    /* SECTIONS */
+    section{
+      padding:90px 20px;
+      max-width:1200px;
+      margin:auto;
+    }
+
+    h2{
+      text-align:center;
+      font-family:"Poppins";
+      margin-bottom:40px;
+    }
+
+    /* BADGES */
+    .badges{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:15px;
+    }
+
+    .badge{
+      background:rgba(0,0,0,0.08);
+      padding:6px 12px;
+      border-radius:20px;
+      font-size:0.8rem;
+    }
+
+    /* GRID */
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:20px;
+    }
+
+    .card{
+      background:white;
+      border-radius:16px;
+      overflow:hidden;
+      box-shadow:0 10px 25px rgba(0,0,0,0.08);
+      transition:0.3s;
+    }
+
+    .card:hover{transform:translateY(-8px);}
+
+    .card img{
+      width:100%;
+      height:200px;
+      object-fit:cover;
+    }
+
+    .card-content{padding:18px;}
+
+    .price{
+      color:#1b5e20;
+      font-weight:700;
+      margin:10px 0;
+    }
+
+    /* FEATURES */
+    .features{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+      gap:15px;
+      text-align:center;
+    }
+
+    .feature{
+      background:white;
+      padding:20px;
+      border-radius:12px;
+    }
+
+    /* FORM */
+    .form{
+      background:white;
+      padding:25px;
+      border-radius:12px;
+      max-width:600px;
+      margin:auto;
+    }
+
+    .form input,.form select{
+      width:100%;
+      padding:12px;
+      margin:8px 0;
+      border-radius:10px;
+      border:1px solid #ddd;
+    }
+
+    /* FOOTER */
+    .footer{
+      background:#0b0f0c;
+      color:white;
+      padding:60px 20px 20px;
+    }
+
+    .footer-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:30px;
+      max-width:1200px;
+      margin:auto;
+    }
+
+    .footer a{
+      color:white;
+      text-decoration:none;
+      display:block;
+      margin:6px 0;
+      opacity:0.8;
+    }
+
+    .footer a:hover{color:#25D366;}
+
+    .footer-bottom{
+      text-align:center;
+      margin-top:40px;
+      opacity:0.6;
+      font-size:0.85rem;
+    }
+
+    /* WhatsApp */
+    .wa{
+      position:fixed;
+      bottom:20px;
+      right:20px;
+      background:#25D366;
+      color:white;
+      padding:15px;
+      border-radius:50%;
+      font-size:20px;
+      text-decoration:none;
+    }
+    .reservation-section{
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
+  text-align: center;
 }
 
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Poppins',sans-serif;
+.reservation-container{
+  max-width: 600px;
+  margin: auto;
 }
 
-/* HERO */
-.hero{
-  height:100vh;
-  position:relative;
-  overflow:hidden;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  color:white;
+.subtitle{
+  opacity: 0.8;
+  margin-bottom: 30px;
 }
 
-.hero-slide{
-  position:absolute;
-  inset:0;
-  background-size:cover;
-  background-position:center;
-  opacity:0;
-  transition:opacity 1s ease-in-out;
-  transform:scale(1.05);
+.reservation-form{
+  background: rgba(255,255,255,0.08);
+  padding: 25px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
 }
 
-.hero-slide.active{
-  opacity:1;
+.form-group{
+  text-align: left;
+  margin-bottom: 15px;
 }
 
-.hero-overlay{
-  position:absolute;
-  inset:0;
-  background:rgba(0,0,0,0.55);
-  z-index:1;
+.form-group input,
+.form-group select{
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  margin-top: 5px;
 }
 
-.hero-content{
-  position:relative;
-  z-index:2;
-  max-width:900px;
-  padding:20px;
+.premium-btn{
+  display: inline-block;
+  margin-top: 15px;
+  padding: 14px;
+  width: 100%;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 10px;
+  background: #25D366;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
 }
 
-.hero h1{
-  font-size:54px;
+.premium-btn:hover{
+  transform: scale(1.03);
+}/*==========================
+      TESTIMONIOS
+===========================*/
+
+#testimonios{
+    padding:90px 20px;
+    background:#f8faf7;
 }
 
-.hero p{
-  font-size:18px;
-  margin-top:10px;
+.testimonios-subtitulo{
+    text-align:center;
+    color:#666;
+    max-width:700px;
+    margin:0 auto 50px;
+    font-size:17px;
 }
 
-.btn{
-  display:inline-block;
-  margin-top:25px;
-  padding:15px 25px;
-  background:var(--verde);
-  color:white;
-  border-radius:12px;
-  text-decoration:none;
-  font-weight:600;
+.testimonials-grid{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+
 }
 
-/* SECTION */
-.section{
-  padding:70px 10%;
+.testimonial-card{
+
+    background:white;
+    border-radius:18px;
+    padding:28px;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+    transition:.35s;
+
 }
 
-.section h2{
-  text-align:center;
-  font-size:36px;
-  margin-bottom:40px;
-  color:var(--verde);
+.testimonial-card:hover{
+
+    transform:translateY(-8px);
+
 }
 
-/* CARD */
-.card{
-  background:white;
-  border-radius:15px;
-  overflow:hidden;
-  box-shadow:0 10px 25px rgba(0,0,0,0.1);
-  margin-bottom:40px;
+.stars{
+
+    color:#FFC107;
+    font-size:20px;
+    margin-bottom:18px;
+
 }
 
-/* CAROUSEL (CORREGIDO PRO) */
-.carousel{
-  position:relative;
-  width:100%;
-  aspect-ratio: 16 / 9;
-  overflow:hidden;
+.testimonial-card p{
+
+    color:#555;
+    line-height:1.8;
+    margin-bottom:25px;
+
 }
 
-.carousel img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  object-position:center;
-  display:none;
+.client{
+
+    display:flex;
+    align-items:center;
+    gap:15px;
+
 }
 
-.carousel img.active{
-  display:block;
+.client img{
+
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    object-fit:cover;
+    border:3px solid #25D366;
+
 }
 
-/* BOTONES CAROUSEL */
-.prev,.next{
-  position:absolute;
-  top:50%;
-  transform:translateY(-50%);
-  background:rgba(0,0,0,0.5);
-  color:white;
-  border:none;
-  padding:10px;
-  border-radius:50%;
-  cursor:pointer;
+.client h4{
+
+    margin:0;
+    font-size:17px;
+
 }
 
-.prev{left:10px;}
-.next{right:10px;}
+.client span{
 
-.card-content{
-  padding:20px;
-}
-
-.card h3{
-  color:var(--cafe);
-}
-
-/* CTA */
-.cta{
-  background:linear-gradient(90deg,var(--verde),var(--cafe));
-  color:white;
-  text-align:center;
-  padding:60px 10%;
-}
-
-.cta a{
-  display:inline-block;
-  margin-top:20px;
-  background:white;
-  color:var(--verde);
-  padding:15px 25px;
-  border-radius:12px;
-  font-weight:700;
-  text-decoration:none;
-}
-
-/* WHATSAPP */
-.whatsapp{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25D366;
-  color:white;
-  padding:15px 18px;
-  border-radius:50px;
-  font-weight:600;
-  text-decoration:none;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px){
-
-  .hero h1{
-    font-size:34px;
-  }
-
-  .hero p{
-    font-size:15px;
-    padding:0 10px;
-  }
-
-  .section{
-    padding:40px 5%;
-  }
-
-  .section h2{
-    font-size:26px;
-  }
-
-  .card-content h3{
-    font-size:18px;
-  }
-
-  .card-content p{
+    color:#777;
     font-size:14px;
-  }
 
-  .btn{
-    padding:12px 18px;
-    font-size:14px;
-  }
 }
-</style>
+
+  </style>
 </head>
 
 <body>
 
+<!-- NAV -->
+<div class="nav">
+  <h2>COFFE MOUNTAIN</h2>
+  <div>
+    <a href="#tours">Tours</a>
+    <a href="#beneficios">Beneficios</a>
+    <a href="#reserva">Reserva</a>
+  </div>
+</div>
+
 <!-- HERO -->
 <div class="hero">
+  <div class="hero-content" data-aos="fade-up">
+    <h2>Descubre los mejores tours en Salento y el Valle de Cocora <h2>
+    <p>Guías bilingües • Transporte incluido • Reserva fácil por WhatsApp </p>
 
-  <div class="hero-slide active" style="background-image:url('images/perfil.jpg')"></div>
-  <div class="hero-slide" style="background-image:url('images/salento9.jpg')"></div>
-  <div class="hero-slide" style="background-image:url('images/cocora1.jpg')"></div>
-  <div class="hero-slide" style="background-image:url('images/loscafetales.jpg')"></div>
+    <a class="btn btn-green" href="https://wa.me/573117388259">Reservar</a>
+    <a class="btn btn-white" href="#tours">Ver tours</a>
 
-  <div class="hero-overlay"></div>
-
-  <div class="hero-content">
-    <h1>COFFEE MOUNTAIN TOURS</h1>
-    <p>Valle de Cocora • Café • Filandia • Salento • Cascadas • Cabalgatas</p>
-    <a class="btn" href="https://wa.me/573167149665">Reservar por WhatsApp</a>
+    <div class="badges">
+      <span class="badge">⭐ 4.9 Experiencias</span>
+      <span class="badge">🌿 Guías locales</span>
+      <span class="badge">🚐 Transporte incluido</span>
+    </div>
   </div>
-
 </div>
 
 <!-- TOURS -->
-<div class="section">
-<h2>🏔️ Experiencias del Eje Cafetero</h2>
+<section id="tours">
+  <h2 data-aos="fade-up">Experiencias Premium</h2>
 
-<!-- COCORA -->
-<div class="card">
-<div class="carousel">
-<img src="images/cocora.lo.jpg" class="active">
-<img src="images/cocora4.jpg">
-<img src="images/cocora6.jpg">
-<img src="images/xBy-iSleJdkewKpL36A4z2tsPehFIp9KBXoe1Fg7nh98XGr98KQu0JI9TAxrxKOqDZR0VEEy9RPLNQVJasHx-QvFPKh4Js-6OjApwpwn3b0NFU81e2XsQ1nc7PCOMH-oJBRKSZuIZsKXWcSbC4J31JRv1pMDOVtOYLvmbfWBrDHs8BOeoWfCGHmKJFG2s.jpg">
-<button class="prev" onclick="prevSlide(this)">‹</button>
-<button class="next" onclick="nextSlide(this)">›</button>
-</div>
-<div class="card-content">
-<h3>🌄 Valle de Cocora (3 - 6 horas)</h3>
-<p>Senderismo entre palmas de cera gigantes y naturaleza única.</p>
-</div>
-</div>
+  <!-- 🌿 NATURALEZA -->
+  <h3>🌿 Naturaleza</h3>
+  <div class="grid">
 
-<!-- CABALGATA -->
-<div class="card">
-<div class="carousel">
-<img src="images/cablgata11.jpg" class="active">
-<img src="images/cablgata2.jpg">
-<img src="images/cabalta3.jpg">
-<button class="prev" onclick="prevSlide(this)">‹</button>
-<button class="next" onclick="nextSlide(this)">›</button>
-</div>
-<div class="card-content">
-<h3>🐎 Cabalgata Cocora - Salento</h3>
-<p>Recorrido a caballo por montañas y cafetales.</p>
-</div>
-</div>
+    <div class="card">
+      <img src="images/santarita2.jpg">
+      <div class="card-content">
+        <h3>Cascadas Santa Rita</h3>
+        <p>Senderos ecológicos, túneles naturales y piscinas cristalinas en la montaña.</p>
+        <div class="price">$160.000 COP | 3h</div>
+        <a class="btn btn-green" href="https://wa.me/573117388259?text=Quiero%20Santa%20Rita">Reservar</a>
+      </div>
+    </div>
 
-<!-- SANTA RITA -->
-<div class="card">
-<div class="carousel">
-<img src="images/copiyo.jpg" class="active">
-<img src="images/santarita2.jpg">
-<img src="images/santarita9.jpg">
-<button class="prev" onclick="prevSlide(this)">‹</button>
-<button class="next" onclick="nextSlide(this)">›</button>
-</div>
-<div class="card-content">
-<h3>🌊 Cascadas de Santa Rita</h3>
-<p>Aventura en selva, agua cristalina y senderos naturales.</p>
-</div>
-</div>
+    <div class="card">
+      <img src="images/cocora6.jpg">
+      <div class="card-content">
+        <h3>Cascadas de Cocora</h3>
+        <p>Caminata en bosque nublado con cascadas ocultas y naturaleza virgen.</p>
+        <div class="price">$220.000 COP | 4-5h</div>
+        <a class="btn btn-green" href="https://wa.me/573117388259?text=Cascadas%20Cocora">Reservar</a>
+      </div>
+    </div>
 
-<!-- COFFEE TOUR -->
-<div class="card">
-<div class="carousel">
-<img src="images/coffetours.png" class="active">
-<img src="images/coffetour.png">
-<img src="images/coffe.jpg">
-<button class="prev" onclick="prevSlide(this)">‹</button>
-<button class="next" onclick="nextSlide(this)">›</button>
-</div>
-<div class="card-content">
-<h3>☕ Coffee Tour Premium</h3>
-<p>Experiencia completa del café: cultivo, proceso y degustación.</p>
-</div>
-</div>
+  </div>
 
-</div>
+  <!-- 🏔 COCORA -->
+  <h3>🏔 Valle de Cocora</h3>
+  <div class="grid">
 
-<!-- CTA -->
-<div class="cta">
-<h2>🚐 Vive el Eje Cafetero con Coffee Mountain Tours</h2>
-<p>Experiencias auténticas con transporte privado y guías locales</p>
-<a href="https://wa.me/573167149665">Reservar ahora</a>
-</div>
+    <div class="card">
+      <img src="images/cocora1.jpg">
+      <div class="card-content">
+        <h3>Cocora 3 horas</h3>
+        <p> transporte en wilys Ruta corta con palmas de cera y miradores principales.</p>
+        <div class="price">$150.000 COP</div>
+        <a class="btn btn-green" href="https://wa.me/573117388259?text=Cocora%203%20horas">Reservar</a>
+      </div>
+    </div>
 
-<a class="whatsapp" href="https://wa.me/573167149665">WhatsApp</a>
+    <div class="card">
+      <img src="images/cocora4.jpg">
+      <div class="card-content">
+        <h3>Cocora 6 horas</h3>
+        <p>Ruta completa de la casa de los colibri con bosque nublado, río,miradores altos y puntes colgantes.</p>
+        <div class="price">$260.000 COP</div>
+        <a class="btn btn-green" href="https://wa.me/573117388259?text=Cocora%206%20horas">Reservar</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/cablgata2.jpg">
+      <div class="card-content">
+        <h3>Cocora 3 horas + Cabalgata</h3>
+        <p>Aventura a caballo entre montañas y paisajes del valle de cocora.</p>
+        <div class="price">$240.000 COP</div>
+        <a class="btn btn-green" href="https://wa.me/573117388259?text=Cocora%20Cabalgata">Reservar</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ☕ CAFÉ -->
+  <h3>☕ Café</h3>
+  <div class="grid">
+
+    <div class="card">
+      <img src="images/coffetours.png">
+      <div class="card-content">
+        <h3>Coffee Tour Tradicional</h3>
+        <p>Experiencia local: cultivo, recolección y proceso artesanal del cafe del café visita la plantacion de la mano de un experto.</p>
+        <div class="price">$100.000 COP</div>
+        <a class="btn btn-green" href="https://wa.me/573117388259?text=Coffee%20Tradicional">Reservar</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/coffetours.png">
+      <div class="card-content">
+        <h3>Coffee Tour Premium</h3>
+        <p>Proceso completo del café especial con tostión y degustación profesional.</p>
+        <div class="price">$170.000 COP</div>
+        <a class="btn btn-green" href="https://wa.me/573117388259?text=Coffee%20Premium">Reservar</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 💎 COMBOS -->
+  <h3>💎 Tours Combo (Más vendidos)</h3>
+  <div class="grid">
+
+    <div class="card">
+      <img src="images/salento.jpg">
+      <div class="card-content">
+        <h3>Salento + Cocora + Filandia</h3>
+        <p>Un día completo: pueblos mágicos + valle de Cocora + miradores de Filandia.</p>
+        <div class="price">$320.000 COP | Día completo</div>
+        <a class="btn btn-green" href="https://wa.me/573117388259?text=Combo%20Salento%20Cocora%20Filandia">Reservar</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/coraycoffetour.jpg">
+      <div class="card-content">
+        <h3>Cocora + Coffee Tour - 6 horas</h3>
+        <p>Montaña + café en una sola experiencia completa del Eje Cafetero.</p>
+        <div class="price">$290.000 COP</div>
+        <a class="btn btn-green" href="https://wa.me/573117388259?text=Cocora%20Coffee%20Tour">Reservar</a>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- BENEFICIOS -->
+<section id="beneficios">
+  <h2>¿Por qué elegirnos?</h2>
+
+  <div class="features">
+    <div class="feature">🌿 Naturaleza real</div>
+    <div class="feature">🚐 Transporte incluido</div>
+    <div class="feature">🗣 Bilingüe</div>
+    <div class="feature">⭐ Experiencia premium</div>
+  </div>
+</section>
+
+<!-- RESERVA PREMIUM -->
+<section id="reserva" class="reservation-section">
+  
+  <div class="reservation-container">
+
+    <h2>Reserva tu experiencia en el Eje Cafetero 🌿</h2>
+    <p class="subtitle">
+      Elige tu tour y recibe confirmación inmediata por WhatsApp
+    </p>
+
+    <form class="reservation-form">
+
+      <div class="form-group">
+        <label>Nombre completo</label>
+        <input type="text" id="name" placeholder="Ej: Juan Pérez" required>
+      </div>
+
+      <div class="form-group">
+        <label>WhatsApp</label>
+        <input type="tel" id="phone" placeholder="Ej: +57 311 738 8259" required>
+      </div>
+
+      <div class="form-group">
+        <label>Selecciona tu experiencia</label>
+        <select id="tour" required>
+          <option value="">-- Elige un tour --</option>
+          <option value="Santa Rita Cascadas">🌊 Santa Rita Cascadas</option>
+          <option value="Valle de Cocora">🌴 Valle de Cocora</option>
+          <option value="Coffee Tour Tradicional">☕ Coffee Tour Tradicional</option>
+          <option value="Coffee Tour Premium">🔥 Coffee Tour Premium</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Fecha aproximada (opcional)</label>
+        <input type="date" id="date">
+      </div>
+
+      <a id="whatsappBtn" class="btn btn-green premium-btn">
+        🚀 Reservar por WhatsApp
+      </a>
+
+    </form>
+
+  </div>
+</section>
+<!-- TESTIMONIOS -->
+<section id="testimonios">
+
+    <h2 data-aos="fade-up">Lo que dicen nuestros viajeros ⭐</h2>
+
+    <p class="testimonios-subtitulo">
+        Cada experiencia deja recuerdos inolvidables. Estas son algunas opiniones de nuestros visitantes.
+    </p>
+
+    <div class="testimonials-grid">
+
+        <div class="testimonial-card" data-aos="fade-up">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+
+            <p>
+                "El Coffee Tour fue una experiencia increíble. Aprendimos todo el proceso del café y el guía hablaba un excelente inglés. Muy recomendado."
+            </p>
+
+            <div class="client">
+                <img src="images/Captura de pantalla 2026-06-29 135718.png" alt="Emily">
+                <div>
+                    <h4>Emily Johnson 🇺🇸</h4>
+                    <span>Coffee Tour Premium</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="150">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+
+            <p>
+                "El Valle de Cocora es espectacular. Todo estuvo perfectamente organizado y el transporte fue muy cómodo."
+            </p>
+
+            <div class="client">
+                <img src="images/testimonio2.jpg" alt="Carlos">
+                <div>
+                    <h4>Carlos Ramírez 🇨🇴</h4>
+                    <span>Cocora 6 Horas</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+
+            <p>
+                "Santa Rita fue uno de los lugares más bonitos que visitamos en Colombia. Naturaleza, tranquilidad y un excelente servicio."
+            </p>
+
+            <div class="client">
+                <img src="images/kevinbc.jpg" alt="Sophie">
+                <div>
+                    <h4>Sophie Martin 🇫🇷</h4>
+                    <span>Santa Rita Waterfalls</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
 
 <script>
-// HERO SLIDER
-let slides = document.querySelectorAll(".hero-slide");
-let index = 0;
+document.getElementById("whatsappBtn").addEventListener("click", function () {
+  const name = document.getElementById("name").value;
+  const phone = document.getElementById("phone").value;
+  const tour = document.getElementById("tour").value;
+  const date = document.getElementById("date").value;
 
-setInterval(() => {
-  slides[index].classList.remove("active");
-  index = (index + 1) % slides.length;
-  slides[index].classList.add("active");
-}, 4000);
+  let message = `Hola 👋 quiero reservar un tour:%0A`;
+  message += `👤 Nombre: ${name}%0A`;
+  message += `📱 WhatsApp: ${phone}%0A`;
+  message += `🧭 Tour: ${tour}%0A`;
+  if (date) message += `📅 Fecha: ${date}%0A`;
 
-// CAROUSEL
-function nextSlide(btn){
-  const c = btn.parentElement;
-  let imgs = c.querySelectorAll("img");
-  let i = [...imgs].findIndex(x => x.classList.contains("active"));
-  imgs[i].classList.remove("active");
-  i = (i + 1) % imgs.length;
-  imgs[i].classList.add("active");
-}
+  const url = `https://wa.me/573117388259?text=${message}`;
+  window.open(url, "_blank");
+});
+</script>
 
-function prevSlide(btn){
-  const c = btn.parentElement;
-  let imgs = c.querySelectorAll("img");
-  let i = [...imgs].findIndex(x => x.classList.contains("active"));
-  imgs[i].classList.remove("active");
-  i = (i - 1 + imgs.length) % imgs.length;
-  imgs[i].classList.add("active");
-}
+<!-- FOOTER -->
+<footer class="footer">
+
+  <div class="footer-container">
+
+    <div>
+      <h3>Coffe Mountain</h3>
+      <p>Experiencias auténticas en el Eje Cafetero</p>
+    </div>
+
+    <div>
+      <h4>Redes</h4>
+      <a href="#">Instagram - k.buenotravel</a>
+      <a href="#">TikTok   - k.buenotravel</a>
+      <a href="mailto:correo@gmail.com">Correo</a>
+    </div>
+
+    <div>
+      <h4>Contacto</h4>
+      <p>📍 Salento y todo el Quindio</p>
+      <p>📞 + 57 3117388259</p>
+      <a href="https://wa.me/573117388259">WhatsApp</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Coffe Mountain
+  </div>
+
+</footer>
+
+<!-- WHATSAPP -->
+<a class="wa" href="https://wa.me/573117388259">💬</a>
+
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({duration:900});
 </script>
 
 </body>
