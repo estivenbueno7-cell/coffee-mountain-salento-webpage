@@ -15,161 +15,246 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
 
 <!-- NAV -->
-<div class="nav">
-  <h2>COFFE MOUNTAIN</h2>
-  <div>
+<nav class="nav" id="navbar">
+  <div class="nav-brand">
+    <span class="nav-icon">☕</span>
+    <h2>COFFEE MOUNTAIN</h2>
+  </div>
+  <div class="nav-links">
     <a href="#tours">Tours</a>
+    <a href="#galeria">Galería</a>
     <a href="#beneficios">Beneficios</a>
+    <a href="#testimonios">Testimonios</a>
+    <a href="#faq">FAQ</a>
     <a href="#reserva">Reserva</a>
   </div>
+  <div class="nav-mobile-toggle" onclick="toggleMobileMenu()">☰</div>
+</nav>
+<div class="language-switcher">
+    <button id="langES" class="lang-btn active" onclick="changeLanguage('es')">
+        🇪🇸 ES
+    </button>
+
+    <button id="langEN" class="lang-btn" onclick="changeLanguage('en')">
+        🇺🇸 EN
+    </button>
 </div>
 
 <!-- HERO -->
 <div class="hero">
   <div class="hero-content" data-aos="fade-up">
-    <h2>Descubre los mejores tours en Salento y el Valle de Cocora <h2>
-    <p>Guías bilingües • Transporte incluido • Reserva fácil por WhatsApp </p>
+    <h1>Descubre los mejores tours en Salento y el Valle de Cocora</h1>
+    <p class="hero-subtitle">Guías bilingües • Transporte incluido • Reserva fácil por WhatsApp</p>
 
-    <a class="btn btn-green" href="https://wa.me/573117388259">Reservar</a>
-    <a class="btn btn-white" href="#tours">Ver tours</a>
+    <div class="hero-buttons">
+      <a class="btn btn-green" href="https://wa.me/573117388259">Reservar Ahora</a>
+      <a class="btn btn-white" href="#tours">Ver Tours</a>
+    </div>
 
     <div class="badges">
       <span class="badge">⭐ 4.9 Experiencias</span>
       <span class="badge">🌿 Guías locales</span>
       <span class="badge">🚐 Transporte incluido</span>
+      <span class="badge">🏆 Más vendidos</span>
     </div>
   </div>
 </div>
 
+<!-- STATS -->
+<section id="stats" class="stats-section">
+  <div class="stats-grid">
+    <div class="stat-item" data-aos="fade-up" data-aos-delay="0">
+      <div class="stat-number" data-target="15">0</div>
+      <div class="stat-label">Tours Disponibles</div>
+    </div>
+    <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+      <div class="stat-number" data-target="2500">0</div>
+      <div class="stat-label">Viajeros Felices</div>
+    </div>
+    <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+      <div class="stat-number" data-target="5">0</div>
+      <div class="stat-label">Años de Experiencia</div>
+    </div>
+    <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+      <div class="stat-number" data-target="49">0</div>
+      <div class="stat-label">Rating Promedio</div>
+    </div>
+  </div>
+</section>
+
 <!-- TOURS -->
 <section id="tours">
   <h2 data-aos="fade-up">Experiencias Premium</h2>
+  <p class="section-subtitle" data-aos="fade-up">Descubre lo mejor del Eje Cafetero con nuestros tours diseñados para ti</p>
 
   <!-- 🌿 NATURALEZA -->
-  <h3>🌿 Naturaleza</h3>
+  <h3 class="category-title" data-aos="fade-right">🌿 Naturaleza</h3>
   <div class="grid">
 
-    <div class="card">
-      <img src="images/santarita2.jpg">
+    <div class="card" data-aos="fade-up">
+      <div class="card-image">
+        <img src="images/santarita2.jpg" alt="Cascadas Santa Rita" loading="lazy">
+        <span class="card-badge">🌿 Naturaleza</span>
+      </div>
       <div class="card-content">
         <h3>Cascadas Santa Rita</h3>
         <p>Senderos ecológicos, túneles naturales y piscinas cristalinas en la montaña.</p>
-        <div class="price">$160.000 COP | 3h</div>
-        <button onclick="openModal(tours.cascadas_santa_rita)">Ver detalles</button>
-        <a class="btn btn-green" href="https://wa.me/573117388259?text=Quiero%20Santa%20Rita">Reservar</a>
+        <div class="price">$150.000 COP | 3h</div>
+        <div class="card-buttons">
+          <button onclick="openModal(tours.cascadas_santa_rita)">Ver detalles</button>
+          <a class="btn btn-green btn-small" href="images/WhatsApp Image 2026-08-03 at 16.16.28.jpeg">Reservar</a>
+        </div>
       </div>
     </div>
 
-    <div class="card">
-      <img src="images/cocora6.jpg">
+    <div class="card" data-aos="fade-up" data-aos-delay="100">
+      <div class="card-image">
+        <img src="images/cocora6.jpg" alt="Cascadas de Cocora" loading="lazy">
+        <span class="card-badge">🌿 Naturaleza</span>
+      </div>
       <div class="card-content">
         <h3>Cascadas de Cocora</h3>
-        
         <p>Caminata en bosque nublado con cascadas ocultas y naturaleza virgen.</p>
-        <div class="price">$250.000 COP | 4-5h</div>
-        <button onclick="openModal(tours.cocora)">Ver detalles</button>
-        <a class="btn btn-green" href="https://wa.me/573117388259?text=Cascadas%20Cocora">Reservar</a>
+        <div class="price">$190.000 COP | 4-5h</div>
+        <div class="card-buttons">
+          <button onclick="openModal(tours.cocora6h)">Ver detalles</button>
+          <a class="btn btn-green btn-small" href="https://wa.me/573117388259?text=Cascadas%20Cocora">Reservar</a>
+        </div>
       </div>
     </div>
 
   </div>
 
   <!-- 🏔 COCORA -->
-  <h3>🏔 Valle de Cocora</h3>
+  <h3 class="category-title" data-aos="fade-right">🏔 Valle de Cocora</h3>
   <div class="grid">
 
-    <div class="card">
-      <img src="images/cocora1.jpg">
+    <div class="card" data-aos="fade-up">
+      <div class="card-image">
+        <img src="images/WhatsApp Image 2026-08-03 at 16.16.28.jpeg" alt="Cocora 3 horas" loading="lazy">
+        <span class="card-badge">🏔 Cocora</span>
+      </div>
       <div class="card-content">
         <h3>Cocora 3 horas</h3>
-        <p> transporte en wilys Ruta corta con palmas de cera y miradores principales.</p>
+        <p>Transporte en wilys. Ruta corta con palmas de cera y miradores principales.</p>
         <div class="price">$150.000 COP</div>
-        <button onclick="openModal(tours.cocora3h)">Ver detalles</button>
-        <a class="btn btn-green" href="https://wa.me/573117388259?text=Cocora%203%20horas">Reservar</a>
+        <div class="card-buttons">
+          <button onclick="openModal(tours.cocora3h)">Ver detalles</button>
+          <a class="btn btn-green btn-small" href="https://wa.me/573117388259?text=Cocora%203%20horas">Reservar</a>
+        </div>
       </div>
     </div>
 
-    <div class="card">
-      <img src="images/cocora4.jpg">
+    <div class="card" data-aos="fade-up" data-aos-delay="100">
+      <div class="card-image">
+        <img src="images/cocora4.jpg" alt="Cocora 6 horas" loading="lazy">
+        <span class="card-badge">🏔 Cocora</span>
+      </div>
       <div class="card-content">
-        <h3>Cocora 6 horas</h3>
-        <p>Ruta completa de la casa de los colibri con bosque nublado, río,miradores altos y puntes colgantes.</p>
-        <div class="price">$260.000 COP</div>
-        <button onclick="openModal(tours.cocora6h)">Ver detalles</button>
-        <a class="btn btn-green" href="https://wa.me/573117388259?text=Cocora%206%20horas">Reservar</a>
+        <h3>Cocora 6 horas Full mas jeep wilis</h3>
+        <p>Ruta completa: casa de los colibríes, bosque nublado, río, miradores altos y puentes colgantes.</p>
+        <div class="price">$280.000 COP</div>
+        <div class="card-buttons">
+          <button onclick="openModal(tours.cocora6h)">Ver detalles</button>
+          <a class="btn btn-green btn-small" href="https://wa.me/573117388259?text=Cocora%206%20horas">Reservar</a>
+        </div>
       </div>
     </div>
 
-    <div class="card">
-      <img src="images/cablgata2.jpg">
+    <div class="card" data-aos="fade-up" data-aos-delay="200">
+      <div class="card-image">
+        <img src="images/cablgata2.jpg" alt="Cocora + Cabalgata" loading="lazy">
+        <span class="card-badge">🐴 Cabalgata</span>
+      </div>
       <div class="card-content">
-        <h3>Cocora 3 horas + Cabalgata</h3>
-        <p>Aventura a caballo entre montañas y paisajes del valle de cocora.</p>
-        <div class="price">$240.000 COP</div>
-        <button onclick="openModal(tours.cabalgata_cocora)">Ver detalles</button>
-        <a class="btn btn-green" href="https://wa.me/573117388259?text=Cocora%20Cabalgata">Reservar</a>
+        <h3>Cocora 3h + Cabalgata + transporte en jeep wilis</h3>
+        <p>Aventura a caballo entre montañas y paisajes del valle de Cocora.</p>
+        <div class="price">$300.000 COP</div>
+        <div class="card-buttons">
+          <button onclick="openModal(tours.cocora_cabalgata)">Ver detalles</button>
+          <a class="btn btn-green btn-small" href="https://wa.me/573117388259?text=Cocora%20Cabalgata">Reservar</a>
+        </div>
       </div>
     </div>
 
   </div>
 
   <!-- ☕ CAFÉ -->
-  <h3>☕ Café</h3>
+  <h3 class="category-title" data-aos="fade-right">☕ Café</h3>
   <div class="grid">
 
-    <div class="card">
-      <img src="images/Captura de pantalla 2026-06-29 135718.png">
+    <div class="card" data-aos="fade-up">
+      <div class="card-image">
+        <img src="images/coffetours.png" alt="Coffee Tour Tradicional" loading="lazy">
+        <span class="card-badge">☕ Café</span>
+      </div>
       <div class="card-content">
-        <h3>Coffee Tour Tradicional</h3>
-        <p>Experiencia local: cultivo, recolección y proceso artesanal del cafe del café visita la plantacion de la mano de un experto.</p>
+        <h3>Coffee Tour Tradicional + jeep wilis</h3>
+        <p>Experiencia local: cultivo, recolección y proceso artesanal del café de la mano de un experto.</p>
         <div class="price">$100.000 COP</div>
-        <button onclick="openModal(tours.cocora)">Ver detalles</button>
-        <a class="btn btn-green" href="https://wa.me/573117388259?text=Coffee%20Tradicional">Reservar</a>
+        <div class="card-buttons">
+          <button onclick="openModal(tours.coffee_premium)">Ver detalles</button>
+          <a class="btn btn-green btn-small" href="https://wa.me/573117388259?text=Coffee%20Tradicional">Reservar</a>
+        </div>
       </div>
     </div>
 
-    <div class="card">
-      <img src="images/coffetours.png">
+    <div class="card" data-aos="fade-up" data-aos-delay="100">
+      <div class="card-image">
+        <img src="images/coffetours.png" alt="Coffee Tour Premium" loading="lazy">
+        <span class="card-badge">☕ Café</span>
+      </div>
       <div class="card-content">
-        <h3>Coffee Tour Premium</h3>
+        <h3>Coffee Tour Premium + jeep wilis</h3>
         <p>Proceso completo del café especial con tostión y degustación profesional.</p>
         <div class="price">$170.000 COP</div>
-        <button onclick="openModal(tours.coffee_premium_2)">Ver detalles</button>
-        <a class="btn btn-green" href="https://wa.me/573117388259?text=Coffee%20Premium">Reservar</a>
+        <div class="card-buttons">
+          <button onclick="openModal(tours.coffee_premium_2)">Ver detalles</button>
+          <a class="btn btn-green btn-small" href="https://wa.me/573117388259?text=Coffee%20Premium">Reservar</a>
+        </div>
       </div>
     </div>
 
   </div>
 
   <!-- 💎 COMBOS -->
-  <h3>💎 Tours Combo (Más vendidos)</h3>
+  <h3 class="category-title" data-aos="fade-right">💎 Tours Combo (Más vendidos)</h3>
   <div class="grid">
 
-    <div class="card">
-      <img src="images/salento.jpg">
+    <div class="card card-featured" data-aos="fade-up">
+      <div class="card-image">
+        <img src="images/salento.jpg" alt="Salento + Cocora + Filandia" loading="lazy">
+        <span class="card-badge card-badge-hot">🔥 MÁS VENDIDO</span>
+      </div>
       <div class="card-content">
         <h3>Salento + Cocora + Filandia</h3>
         <p>Un día completo: pueblos mágicos + valle de Cocora + miradores de Filandia.</p>
-        <div class="price">$320.000 COP | Día completo</div>
-        <button onclick="openModal(tours.cocora)">Ver detalles</button>
-        <a class="btn btn-green" href="https://wa.me/573117388259?text=Combo%20Salento%20Cocora%20Filandia">Reservar</a>
+        <div class="price">$360.000 COP | Día completo</div>
+        <div class="card-buttons">
+          <button onclick="openModal(tours.filandia)">Ver detalles</button>
+          <a class="btn btn-green btn-small" href="https://wa.me/573117388259?text=Combo%20Salento%20Cocora%20Filandia">Reservar</a>
+        </div>
       </div>
     </div>
 
-    <div class="card">
-      <img src="images/coraycoffetour.jpg">
+    <div class="card card-featured" data-aos="fade-up" data-aos-delay="100">
+      <div class="card-image">
+        <img src="images/coraycoffetour.jpg" alt="Cocora + Coffee Tour" loading="lazy">
+        <span class="card-badge card-badge-hot">🔥 MÁS VENDIDO</span>
+      </div>
       <div class="card-content">
-        <h3>Cocora + Coffee Tour - 6 horas</h3>
+        <h3>Cocora + Coffee Tour</h3>
         <p>Montaña + café en una sola experiencia completa del Eje Cafetero.</p>
-        <div class="price">$290.000 COP</div>
-        <button onclick="openModal(tours.salento00)">Ver detalles</button>
-        <a class="btn btn-green" href="https://wa.me/573117388259?text=Cocora%20Coffee%20Tour">Reservar</a>
+        <div class="price">$300.000 COP</div>
+        <div class="card-buttons">
+          <button onclick="openModal(tours.cocora_coffee)">Ver detalles</button>
+          <a class="btn btn-green btn-small" href="https://wa.me/573117388259?text=Cocora%20Coffee%20Tour">Reservar</a>
+        </div>
       </div>
     </div>
 
@@ -177,224 +262,331 @@
 
 </section>
 
+<!-- GALERÍA CARRUSEL -->
+<section id="galeria" class="gallery-section">
+  <h2 data-aos="fade-up">Galería de Experiencias</h2>
+  <p class="section-subtitle" data-aos="fade-up">Un vistazo a las aventuras que te esperan</p>
+
+  <div class="gallery-carousel" data-aos="fade-up">
+    <button class="gallery-btn gallery-prev" onclick="changeGallerySlide(-1)">&#10094;</button>
+    
+    <div class="gallery-track-container">
+      <div class="gallery-track" id="galleryTrack">
+        <div class="gallery-slide"><img src="images/cablgata2.jpg" alt="Galería 1" loading="lazy"></div>
+        <div class="gallery-slide"><img src="images/Captura de pantalla 2026-08-07 223749.png" alt="Galería 2" loading="lazy"></div>
+        <div class="gallery-slide"><img src="5c0176fe-f0e0-4661-86ac-f54c700ed46d.jpg" alt="Galería 3" loading="lazy"></div>
+        <div class="gallery-slide"><img src="images/xBy-iSleJdkewKpL36A4z2tsPehFIp9KBXoe1Fg7nh98XGr98KQu0JI9TAxrxKOqDZR0VEEy9RPLNQVJasHx-QvFPKh4Js-6OjApwpwn3b0NFU81e2XsQ1nc7PCOMH-oJBRKSZuIZsKXWcSbC4J31JRv1pMDOVtOYLvmbfWBrDHs8BOeoWfCGHmKJFG2s.jpg" alt="Galería 4" loading="lazy"></div>
+        <div class="gallery-slide"><img src="images/santarita2.jpg" alt="Galería 5" loading="lazy"></div>
+        <div class="gallery-slide"><img src="images/salento.jpg" alt="Galería 6" loading="lazy"></div>
+          <div class="gallery-slide"><img src="images/Captura de pantalla 2026-06-29 135718.png" alt="Galería 7" loading="lazy"></div>
+      </div>
+    </div>
+    
+    <button class="gallery-btn gallery-next" onclick="changeGallerySlide(1)">&#10095;</button>
+  </div>
+  
+  <div class="gallery-dots" id="galleryDots"></div>
+</section>
+
 <!-- BENEFICIOS -->
 <section id="beneficios">
-  <h2>¿Por qué elegirnos?</h2>
+  <h2 data-aos="fade-up">¿Por qué elegirnos?</h2>
+  <p class="section-subtitle" data-aos="fade-up">Más que tours, creamos experiencias inolvidables</p>
 
   <div class="features">
-    <div class="feature">🌿 Naturaleza real</div>
-    <div class="feature">🚐 Transporte incluido</div>
-    <div class="feature">🗣 Bilingüe</div>
-    <div class="feature">⭐ Experiencia premium</div>
+    <div class="feature" data-aos="fade-up" data-aos-delay="0">
+      <div class="feature-icon">🌿</div>
+      <h4>Naturaleza Real</h4>
+      <p>Senderos auténticos lejos del turismo masivo</p>
+    </div>
+    <div class="feature" data-aos="fade-up" data-aos-delay="100">
+      <div class="feature-icon">🚐</div>
+      <h4>Transporte Incluido</h4>
+      <p>Recogida y regreso desde tu hospedaje</p>
+    </div>
+    <div class="feature" data-aos="fade-up" data-aos-delay="200">
+      <div class="feature-icon">🗣</div>
+      <h4>Guías Bilingües</h4>
+      <p>Español e inglés para viajeros de todo el mundo</p>
+    </div>
+    <div class="feature" data-aos="fade-up" data-aos-delay="300">
+      <div class="feature-icon">⭐</div>
+      <h4>Experiencia Premium</h4>
+      <p>Grupos pequeños y atención personalizada</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIOS CARRUSEL -->
+<section id="testimonios" class="testimonials-section">
+  <h2 data-aos="fade-up">Lo que dicen nuestros viajeros ⭐</h2>
+  <p class="section-subtitle" data-aos="fade-up">Cada experiencia deja recuerdos inolvidables</p>
+
+  <div class="testimonials-carousel" data-aos="fade-up">
+    <div class="testimonials-track" id="testimonialsTrack">
+      
+      <div class="testimonial-slide">
+        <div class="testimonial-card">
+          <div class="quote-icon">"</div>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-text">"El Coffee Tour fue una experiencia increíble. Aprendimos todo el proceso del café y el guía hablaba un excelente inglés. Muy recomendado."</p>
+          <div class="client">
+            <div class="client-avatar">EJ</div>
+            <div class="client-info">
+              <h4>Emily Johnson 🇺🇸</h4>
+              <span>Coffee Tour Premium</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-slide">
+        <div class="testimonial-card">
+          <div class="quote-icon">"</div>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-text">"El Valle de Cocora es espectacular. Todo estuvo perfectamente organizado y el transporte fue muy cómodo."</p>
+          <div class="client">
+            <div class="client-avatar">CR</div>
+            <div class="client-info">
+              <h4>Carlos Ramírez 🇨🇴</h4>
+              <span>Cocora 6 Horas</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-slide">
+        <div class="testimonial-card">
+          <div class="quote-icon">"</div>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-text">"Santa Rita fue uno de los lugares más bonitos que visitamos en Colombia. Naturaleza, tranquilidad y un excelente servicio."</p>
+          <div class="client">
+            <div class="client-avatar">SM</div>
+            <div class="client-info">
+              <h4>Sophie Martin 🇫🇷</h4>
+              <span>Santa Rita Waterfalls</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-slide">
+        <div class="testimonial-card">
+          <div class="quote-icon">"</div>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-text">"La combinación de Cocora y el Coffee Tour fue perfecta. Un día completo lleno de paisajes hermosos y café delicioso."</p>
+          <div class="client">
+            <div class="client-avatar">MK</div>
+            <div class="client-info">
+              <h4>Michael Klein 🇩🇪</h4>
+              <span>Cocora + Coffee Tour</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    
+    <div class="testimonials-dots" id="testimonialsDots"></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="faq-section">
+  <h2 data-aos="fade-up">Preguntas Frecuentes</h2>
+  <p class="section-subtitle" data-aos="fade-up">Resolvemos tus dudas para que reserves con confianza</p>
+
+  <div class="faq-container" data-aos="fade-up">
+    
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <span>¿Cómo reservo un tour?</span>
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-answer">
+        <p>Puedes reservar directamente por WhatsApp haciendo clic en cualquier botón verde de "Reservar", o llenando el formulario al final de esta página. Te responderemos en minutos con la confirmación.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <span>¿El transporte está incluido?</span>
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-answer">
+        <p>Sí, la mayoría de nuestros tours incluyen transporte desde Salento y zonas cercanas del Quindío. En el detalle de cada tour verás exactamente qué incluye.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <span>¿Necesito experiencia previa para los tours?</span>
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-answer">
+        <p>¡Para nada! Nuestros tours están diseñados para todos los niveles. Tenemos rutas cortas de 3 horas y rutas más exigentes de 6 horas. Tú eliges según tu condición física.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <span>¿Qué pasa si llueve?</span>
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-answer">
+        <p>Los tours se realizan con lluvia ligera. En caso de tormenta fuerte, reprogramamos sin costo adicional. Tu seguridad es lo primero.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <span>¿Aceptan pagos con tarjeta?</span>
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-answer">
+        <p>Actualmente aceptamos transferencia bancaria, Nequi, Daviplata y efectivo el día del tour. Pronto agregaremos pagos con tarjeta.</p>
+      </div>
+    </div>
+
   </div>
 </section>
 
 <!-- RESERVA PREMIUM -->
 <section id="reserva" class="reservation-section">
-  
   <div class="reservation-container">
-
     <h2>Reserva tu experiencia en el Eje Cafetero 🌿</h2>
-    <p class="subtitle">
-      Elige tu tour y recibe confirmación inmediata por WhatsApp
-    </p>
+    <p class="subtitle">Elige tu tour y recibe confirmación inmediata por WhatsApp</p>
 
-    <form class="reservation-form">
-
+    <form class="reservation-form" id="reservaForm" onsubmit="return handleReservation(event)">
+      
       <div class="form-group">
-        <label>Nombre completo</label>
+        <label for="name">Nombre completo *</label>
         <input type="text" id="name" placeholder="Ej: Juan Pérez" required>
       </div>
 
       <div class="form-group">
-        <label>WhatsApp</label>
+        <label for="phone">WhatsApp *</label>
         <input type="tel" id="phone" placeholder="Ej: +57 311 738 8259" required>
       </div>
 
       <div class="form-group">
-        <label>Selecciona tu experiencia</label>
+        <label for="tour">Selecciona tu experiencia *</label>
         <select id="tour" required>
           <option value="">-- Elige un tour --</option>
-          <option value="Santa Rita Cascadas">🌊 Santa Rita Cascadas</option>
-          <option value="Valle de Cocora">🌴 Valle de Cocora</option>
+          <option value="Cascadas Santa Rita">🌊 Cascadas Santa Rita</option>
+          <option value="Cocora 3 Horas">🌴 Cocora 3 Horas</option>
+          <option value="Cocora 6 Horas Full">🌴 Cocora 6 Horas Full</option>
+          <option value="Cocora + Cabalgata">🐴 Cocora + Cabalgata</option>
           <option value="Coffee Tour Tradicional">☕ Coffee Tour Tradicional</option>
           <option value="Coffee Tour Premium">🔥 Coffee Tour Premium</option>
+          <option value="Salento + Cocora + Filandia">💎 Salento + Cocora + Filandia</option>
+          <option value="Cocora + Coffee Tour">💎 Cocora + Coffee Tour</option>
         </select>
       </div>
 
       <div class="form-group">
-        <label>Fecha aproximada (opcional)</label>
+        <label for="date">Fecha aproximada</label>
         <input type="date" id="date">
       </div>
 
-      <a id="whatsappBtn" class="btn btn-green premium-btn">
+      <div class="form-group">
+        <label for="people">Número de personas</label>
+        <input type="number" id="people" min="1" max="20" placeholder="Ej: 2" value="1">
+      </div>
+
+      <button type="submit" class="premium-btn">
         🚀 Reservar por WhatsApp
-      </a>
+      </button>
 
     </form>
-
   </div>
 </section>
-<!-- TESTIMONIOS -->
-<section id="testimonios">
-
-    <h2 data-aos="fade-up">Lo que dicen nuestros viajeros ⭐</h2>
-
-    <p class="testimonios-subtitulo">
-        Cada experiencia deja recuerdos inolvidables. Estas son algunas opiniones de nuestros visitantes.
-    </p>
-
-    <div class="testimonials-grid">
-
-        <div class="testimonial-card" data-aos="fade-up">
-            <div class="stars">⭐⭐⭐⭐⭐</div>
-
-            <p>
-                "El Coffee Tour fue una experiencia increíble. Aprendimos todo el proceso del café y el guía hablaba un excelente inglés. Muy recomendado."
-            </p>
-
-            <div class="client">
-                <img src="images/Captura de pantalla 2026-06-29 135718.png" alt="Emily">
-                <div>
-                    <h4>Emily Johnson 🇺🇸</h4>
-                    <span>Coffee Tour Premium</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="150">
-            <div class="stars">⭐⭐⭐⭐⭐</div>
-
-            <p>
-                "El Valle de Cocora es espectacular. Todo estuvo perfectamente organizado y el transporte fue muy cómodo."
-            </p>
-
-            <div class="client">
-                <img src="images/testimonio2.jpg" alt="Carlos">
-                <div>
-                    <h4>Carlos Ramírez 🇨🇴</h4>
-                    <span>Cocora 6 Horas</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
-            <div class="stars">⭐⭐⭐⭐⭐</div>
-
-            <p>
-                "Santa Rita fue uno de los lugares más bonitos que visitamos en Colombia. Naturaleza, tranquilidad y un excelente servicio."
-            </p>
-
-            <div class="client">
-                <img src="images/kevinbc.jpg" alt="Sophie">
-                <div>
-                    <h4>Sophie Martin 🇫🇷</h4>
-                    <span>Santa Rita Waterfalls</span>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-</section>
-
-<script>
-document.getElementById("whatsappBtn").addEventListener("click", function () {
-  const name = document.getElementById("name").value;
-  const phone = document.getElementById("phone").value;
-  const tour = document.getElementById("tour").value;
-  const date = document.getElementById("date").value;
-
-  let message = `Hola 👋 quiero reservar un tour:%0A`;
-  message += `👤 Nombre: ${name}%0A`;
-  message += `📱 WhatsApp: ${phone}%0A`;
-  message += `🧭 Tour: ${tour}%0A`;
-  if (date) message += `📅 Fecha: ${date}%0A`;
-
-  const url = `https://wa.me/573117388259?text=${message}`;
-  window.open(url, "_blank");
-});
-</script>
 
 <!-- FOOTER -->
 <footer class="footer">
-
   <div class="footer-container">
-
-    <div>
-      <h3>Coffe Mountain</h3>
+    <div class="footer-brand">
+      <h3>☕ Coffee Mountain</h3>
       <p>Experiencias auténticas en el Eje Cafetero</p>
+      <div class="footer-social">
+        <a href="https://instagram.com/k.buenotravel" target="_blank">📷 Instagram</a>
+        <a href="https://tiktok.com/@k.buenotravel" target="_blank">🎵 TikTok</a>
+      </div>
     </div>
 
-    <div>
-      <h4>Redes</h4>
-      <a href="#">Instagram - k.buenotravel</a>
-      <a href="#">TikTok   - k.buenotravel</a>
-      <a href="mailto:correo@gmail.com">Correo</a>
+    <div class="footer-links">
+      <h4>Tours</h4>
+      <a href="#tours">Valle de Cocora</a>
+      <a href="#tours">Coffee Tours</a>
+      <a href="#tours">Cascadas Santa Rita</a>
+      <a href="#tours">Combos</a>
     </div>
 
-    <div>
+    <div class="footer-links">
       <h4>Contacto</h4>
-      <p>📍 Salento y todo el Quindio</p>
-      <p>📞 + 57 3117388259</p>
-      <a href="https://wa.me/573117388259">WhatsApp</a>
+      <p>📍 Salento, Quindío, Colombia</p>
+      <p>📞 +57 311 738 8259</p>
+      <a href="https://wa.me/573117388259">💬 WhatsApp</a>
+      <a href="mailto:correo@gmail.com">✉️ correo@gmail.com</a>
     </div>
-
   </div>
 
   <div class="footer-bottom">
-    © 2026 Coffe Mountain
+    © 2026 Coffee Mountain — Salento, Quindío 🇨🇴
   </div>
-
 </footer>
 
-<!-- WHATSAPP -->
-<a class="wa" href="https://wa.me/573117388259">💬</a>
+<!-- WHATSAPP FLOTANTE -->
+<a class="wa" href="https://wa.me/573117388259" target="_blank" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" width="28" height="28" fill="white">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413"/>
+  </svg>
+</a>
 
-<!-- AOS -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init({duration:900});
-</script>
+<!-- MODAL -->
 <div id="tourModal" class="modal">
   <div class="modal-content">
-
     <span class="close" onclick="closeModal()">&times;</span>
 
-    <!-- CARRUSEL -->
     <div class="carousel">
       <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
-
       <img id="mainImage" src="" alt="Tour imagen">
-
       <button class="next" onclick="changeSlide(1)">&#10095;</button>
     </div>
 
-    <!-- MINIATURAS -->
     <div class="thumbnails" id="thumbnails"></div>
 
-    <!-- INFO -->
     <div class="tour-info">
       <h2 id="tourTitle"></h2>
-
       <p id="tourDescription"></p>
 
-      <h3>Qué incluye</h3>
-      <ul id="includes"></ul>
+      <div class="tour-details">
+        <div class="detail-column">
+          <h3>✅ Qué incluye</h3>
+          <ul id="includes"></ul>
+        </div>
+        <div class="detail-column">
+          <h3>❌ Qué no incluye</h3>
+          <ul id="notIncludes"></ul>
+        </div>
+      </div>
 
-      <h3>Qué no incluye</h3>
-      <ul id="notIncludes"></ul>
-
-      <h3>Itinerario</h3>
-      <p id="itinerary"></p>
+      <h3>🗺️ Itinerario</h3>
+      <p id="itinerary" class="itinerary-text"></p>
 
       <a id="whatsappBtn" target="_blank" class="whatsapp-btn">
-        Reservar por WhatsApp
+        💬 Reservar por WhatsApp
       </a>
     </div>
-
   </div>
 </div>
+
+<!-- SCRIPTS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 900, once: true, offset: 100 });
+</script>
 <script src="app.js"></script>
+
 </body>
 </html>
