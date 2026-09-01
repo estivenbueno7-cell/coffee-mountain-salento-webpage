@@ -52,7 +52,7 @@ const tours = {
       "images/Captura de pantalla 2026-08-10 182600.png",
       "images/Captura de pantalla 2026-08-10 182541.png",
       "images/santarita2.jpg",
-      "images/santa-ritawter.png"
+      "images/santarita2.jpg"
     ]
   },
 
@@ -106,7 +106,7 @@ const tours = {
     notIncludes: ["Almuerzo (recomendamos traer lonchera)", "Propinas (opcional)", "Gastos personales"],
     images: [
       "images/Captura de pantalla 2023-12-01 144335.png",
-      "images/Captura de pantalla 2026-06-29 135718.png",
+      "images/790315708_1465437998759742_7948224593008606439_n.jpg",
       "images/cocora---------.jpg",
       "images/NMqqAvpDA4lTbDAIGqdnD_y7Ugu6an33buyarsa3OnMrM2pJCPkGMo3HaP69Ql7bxGGWt-75DtP1G0GKQKC2SoAAwT9t_QazsoG0AsRe3Dg1w0jaHcoo7vvfZY9NnnNnSwnIUFR0i3ToGuHzdqZowdePRujDslDjflnu1gEqzBeLN_Hp2Zrmc8mCJglotTCX.jpg",
       "images/loscafetales.jpg"
@@ -123,7 +123,8 @@ const tours = {
       "images/salento.jpg",
       "images/Captura de pantalla 2023-12-01 144335.png",
       "images/salento.jpg",
-      "images/NMqqAvpDA4lTbDAIGqdnD_y7Ugu6an33buyarsa3OnMrM2pJCPkGMo3HaP69Ql7bxGGWt-75DtP1G0GKQKC2SoAAwT9t_QazsoG0AsRe3Dg1w0jaHcoo7vvfZY9NnnNnSwnIUFR0i3ToGuHzdqZowdePRujDslDjflnu1gEqzBeLN_Hp2Zrmc8mCJglotTCX.jpg"
+      "images/NMqqAvpDA4lTbDAIGqdnD_y7Ugu6an33buyarsa3OnMrM2pJCPkGMo3HaP69Ql7bxGGWt-75DtP1G0GKQKC2SoAAwT9t_QazsoG0AsRe3Dg1w0jaHcoo7vvfZY9NnnNnSwnIUFR0i3ToGuHzdqZowdePRujDslDjflnu1gEqzBeLN_Hp2Zrmc8mCJglotTCX.jpg",
+      "images/790315708_1465437998759742_7948224593008606439_n.jpg"
     ]
   },
 
@@ -136,8 +137,9 @@ const tours = {
     images: [
       "images/salento.jpg",
       "images/Mirador-Colina-Iluminada-de-Filandia-en-Quindío1 (1).webp",
-      "5c0176fe-f0e0-4661-86ac-f54c700ed46d.jpg",
+      "images/5c0176fe-f0e0-4661-86ac-f54c700ed46d.jpg",
       "images/salento9.jpg",
+      "images/790912216_1617085066454833_5393938285024541553_n.jpg"
       
     ]
   },
@@ -149,10 +151,10 @@ const tours = {
     includes: ["Transporte ida y vuelta", "Guía experto catador", "Seguro médico", "Entrada a la finca", "Caminata guiada por la plantación", "Hidratación", "Snack gourmet", "Cata comparativa de 3 regiones", "Paquete de café premium (500g)"],
     notIncludes: ["Almuerzo", "Propinas (opcional)", "Gastos personales"],
     images: [
-      "images/Captura de pantalla 2026-06-29 135718.png",
+      "images/790315708_1465437998759742_7948224593008606439_n.jpg",
       "images/coffetour.png",
       "images/Captura de pantalla 2026-08-07 223749.png",
-      "images/Captura de pantalla 2026-08-09 115413.png"
+      "images/790667510_1377405037286403_3438952501262166571_n.jpg"
     ]
   },
   };
