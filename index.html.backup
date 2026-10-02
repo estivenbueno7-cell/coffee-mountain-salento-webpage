@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#123526">
+  <meta name="description" content="Salento Tours Mountain: descubre Salento, el Valle de Cocora y la cultura cafetera del Quindío en experiencias locales y Jeep Willys. Reserva directo por WhatsApp.">
+  <meta name="keywords" content="Salento tours, Valle de Cocora, Jeep Willys, finca cafetera, Quindío, Colombia, coffee tour">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Salento Tours Mountain | Vive el Quindío">
+  <meta property="og:description" content="Cocora, café, montaña y experiencias locales. Tu aventura en el Quindío comienza aquí.">
+  <meta property="og:image" content="images/optimized/cocora.lo.webp">
+  <title>Salento Tours Mountain | Vive el Quindío</title>
+  <link rel="icon" href="favicon.svg">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<header class="site-header" id="header">
+  <nav class="nav container">
+    <a class="brand" href="#inicio" aria-label="Salento Tours Mountain">
+      <span class="brand-emblem">S</span><span class="brand-copy"><strong>Salento Tours</strong><small>Mountain · Quindío</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+    <div class="nav-links" id="navLinks">
+      <a href="#experiencia">La experiencia</a><a href="#tours">Tours</a><a href="#galeria">Galería</a><a href="#nosotros">Nosotros</a><a href="#faq">FAQ</a>
+      <a class="nav-book" href="https://wa.me/573117388259?text=Hola%20Salento%20Tours%20Mountain%2C%20quiero%20reservar%20un%20tour." target="_blank" rel="noopener"><span>Reserva directa</span><b>WhatsApp ↗</b></a>
+    </div>
+  </nav>
+</header>
+
+<main id="contenido">
+<section class="hero" id="inicio">
+  <div class="hero-photo"><img src="images/optimized/cocora.lo.webp" alt="Valle de Cocora, Quindío" fetchpriority="high"></div>
+  <div class="hero-shade"></div>
+  <div class="hero-grain"></div>
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <div class="hero-kicker"><span></span> SALENTO · QUINDÍO · COLOMBIA</div>
+      <h1>El Quindío no se<br>visita. <em>Se vive.</em></h1>
+      <p>Palmas de cera, café de origen, caminos de montaña y el auténtico Jeep Willys. Descubre Salento desde adentro.</p>
+      <div class="hero-actions"><a class="btn btn-accent" href="#tour-estrella">Descubrir la experiencia <span>↘</span></a><a class="btn btn-ghost" href="https://wa.me/573117388259?text=Hola%20Salento%20Tours%20Mountain%2C%20quiero%20informaci%C3%B3n%20sobre%20los%20tours." target="_blank" rel="noopener">Hablar por WhatsApp</a></div>
+      <div class="hero-trust"><span>✓ Reserva directa</span><span>✓ Guías locales</span><span>✓ Experiencias reales</span></div>
+    </div>
+    <aside class="hero-card">
+      <div class="hero-card-top"><span class="status-dot"></span> EXPERIENCIA PRINCIPAL <span class="hero-card-star">★</span></div>
+      <div class="hero-card-image"><img src="images/optimized/WhatsApp Image 2026-08-03 at 16.16.28.webp" alt="Jeep Willys en el Valle de Cocora"></div>
+      <div class="hero-card-body"><div class="mini-label">SALENTO + COCORA + CAFÉ</div><h2>Un día. Tres formas de conocer el Quindío.</h2><div class="hero-card-tags"><span>🚙 Jeep Willys</span><span>🌴 Cocora</span><span>☕ Finca cafetera</span></div><button class="card-cta" data-tour="salento00">Ver esta experiencia <span>→</span></button></div>
+    </aside>
+  </div>
+  <div class="hero-bottom"><div class="container hero-bottom-inner"><span>SCROLL PARA DESCUBRIR</span><div class="scroll-line"></div><span>01 / 05</span></div></div>
+</section>
+
+<section class="intro section reveal" id="experiencia">
+  <div class="container intro-layout">
+    <div class="section-number">01</div>
+    <div class="intro-head"><span class="eyebrow">NO ES UN TOUR MÁS</span><h2>Viaja como quien<br><em>pertenece al lugar.</em></h2></div>
+    <div class="intro-copy"><p>Hay una diferencia entre conocer un destino y sentir que realmente estuviste allí. Nuestras experiencias mezclan paisaje, café, cultura y aventura para que el Quindío no termine en una foto.</p><a class="under-link" href="#tours">Explorar experiencias <span>↘</span></a></div>
+  </div>
+  <div class="container pillars"><div><b>01</b><strong>Naturaleza</strong><span>Cocora · montaña · cascadas</span></div><div><b>02</b><strong>Cultura cafetera</strong><span>Fincas · procesos · café</span></div><div><b>03</b><strong>Movimiento</strong><span>Jeep Willys · caminos rurales</span></div><div><b>04</b><strong>Cercanía</strong><span>Reserva directa · atención local</span></div></div>
+</section>
+
+<section class="featured section" id="tour-estrella">
+  <div class="container">
+    <div class="section-top reveal"><div><span class="eyebrow">01 · EXPERIENCIA PRINCIPAL</span><h2>La ruta que<br><em>lo reúne todo.</em></h2></div><p>Salento, Valle de Cocora y finca cafetera en un solo recorrido. Una experiencia pensada para descubrir los clásicos del Quindío con tiempo para disfrutarlos.</p></div>
+    <article class="feature-showcase reveal">
+      <div class="feature-visual"><img id="featuredImage" src="images/optimized/salento.webp" alt="Salento y paisaje del Quindío"><div class="feature-overlay"></div><div class="feature-photo-note"><span>01</span><small>VALLE DE COCORA · QUINDÍO</small></div><div class="featured-thumbs" id="featuredThumbs"></div></div>
+      <div class="feature-info"><div class="feature-badge">★ EXPERIENCIA PRINCIPAL</div><div class="feature-meta"><span>🚙 Jeep Willys</span><span>⏱ Día completo</span><span>📍 Salento</span></div><h3>Salento + Valle de Cocora + Finca Cafetera</h3><p>Empieza en Salento, atraviesa el paisaje de palmas de cera y termina entre cafetales con una experiencia local. Un recorrido para quienes quieren llevarse una imagen completa del Quindío.</p><div class="feature-checks"><span>✓ Transporte en Jeep Willys</span><span>✓ Valle de Cocora</span><span>✓ Experiencia cafetera</span><span>✓ Atención directa</span></div><div class="feature-bottom"><div><small>PRECIO</small><strong>Consulta disponibilidad</strong></div><button class="btn btn-dark" data-tour="salento00">Ver itinerario y detalles ↗</button></div></div>
+    </article>
+  </div>
+</section>
+
+<section class="tour-section section" id="tours">
+  <div class="container">
+    <div class="section-top centered reveal"><span class="eyebrow">02 · TODAS LAS EXPERIENCIAS</span><h2>Elige cómo quieres<br><em>vivir el Quindío.</em></h2><p>Abre cada experiencia para ver fotografías, recorrido, qué incluye y reservar directamente con nosotros.</p></div>
+    <div class="filter-wrap"><div class="filters" role="group" aria-label="Filtrar experiencias"><button class="filter active" data-filter="all">Todas</button><button class="filter" data-filter="estrella">Principal</button><button class="filter" data-filter="cocora">Cocora</button><button class="filter" data-filter="cafe">Café</button><button class="filter" data-filter="naturaleza">Naturaleza</button><button class="filter" data-filter="aventura">Aventura</button></div></div>
+    <div class="tour-grid" id="tourGrid"></div>
+  </div>
+</section>
+
+<section class="gallery-section section" id="galeria">
+  <div class="container">
+    <div class="section-top reveal"><div><span class="eyebrow">03 · FOTOGRAFÍAS REALES</span><h2>Antes de reservar,<br><em>mira el lugar.</em></h2></div><p>Una selección de paisajes y momentos de nuestras experiencias. Toca cualquier imagen para verla en grande.</p></div>
+    <div class="masonry reveal" id="siteGallery"></div>
+  </div>
+</section>
+
+<section class="video-section section">
+  <div class="container video-layout reveal"><div class="video-copy"><span class="eyebrow light">04 · EN MOVIMIENTO</span><h2>Que la pantalla<br>te dé ganas de <em>salir.</em></h2><p>Tu web queda preparada para mostrar reels y videos propios de Cocora, café, Jeep Willys y las experiencias del día.</p><div class="video-note"><span>▶</span><div><strong>Video ready</strong><small>MP4 · H.264 · 1080p · formato vertical u horizontal</small></div></div></div><div class="video-grid" id="videoGrid"></div></div>
+</section>
+
+<section class="why section" id="nosotros">
+  <div class="container"><div class="section-top centered reveal"><span class="eyebrow">05 · LA DIFERENCIA</span><h2>Menos turismo de catálogo.<br><em>Más experiencia.</em></h2></div><div class="why-grid"><article class="value-card reveal"><span>01</span><div class="value-icon">⌁</div><h3>Guías locales</h3><p>Conoce el territorio desde una mirada cercana, con contexto y recomendaciones reales.</p></article><article class="value-card reveal"><span>02</span><div class="value-icon">✦</div><h3>Jeep Willys</h3><p>El camino también es parte del viaje. Recorre el paisaje cafetero con carácter.</p></article><article class="value-card reveal"><span>03</span><div class="value-icon">↗</div><h3>Reserva directa</h3><p>Sin vueltas: escribes, preguntas, confirmas y coordinas directamente por WhatsApp.</p></article><article class="value-card reveal"><span>04</span><div class="value-icon">◌</div><h3>Experiencias reales</h3><p>Fotografías propias y recorridos presentados de forma clara antes de reservar.</p></article></div></div>
+</section>
+
+<section class="about section">
+  <div class="container about-panel reveal"><div class="about-image"><img src="images/optimized/perfil.webp" alt="Paisaje de montaña del Quindío"></div><div class="about-copy"><span class="eyebrow">SALENTO TOURS MOUNTAIN</span><h2>El viaje empieza cuando sales del mapa.</h2><p>Somos una propuesta de turismo local en Salento y el Eje Cafetero, construida alrededor de naturaleza, café, cultura y caminos de montaña.</p><p>Queremos que tengas tiempo para mirar, preguntar, probar y disfrutar. Por eso la web te muestra primero lo que realmente importa: el lugar, la experiencia y cómo reservar.</p><a class="under-link" href="https://wa.me/573117388259?text=Hola%2C%20quiero%20conocer%20m%C3%A1s%20sobre%20Salento%20Tours%20Mountain." target="_blank" rel="noopener">Hablar con nosotros <span>↗</span></a></div></div>
+</section>
+
+<section class="faq section" id="faq"><div class="container faq-layout reveal"><div><span class="eyebrow">06 · PREGUNTAS</span><h2>¿Tienes dudas?<br><em>Hablemos.</em></h2><p>La forma más rápida de confirmar disponibilidad y detalles es escribirnos directamente.</p><a class="btn btn-dark" href="https://wa.me/573117388259?text=Hola%20Salento%20Tours%20Mountain%2C%20tengo%20una%20pregunta%20sobre%20un%20tour." target="_blank" rel="noopener">Preguntar por WhatsApp ↗</a></div><div class="accordion"><details open><summary>¿Cómo puedo reservar?</summary><p>Escríbenos por WhatsApp. Te ayudaremos a confirmar disponibilidad, horario, punto de encuentro y detalles de la experiencia.</p></details><details><summary>¿Dónde nos encontramos?</summary><p>El punto de encuentro habitual en Salento es la Parroquia Nuestra Señora del Carmen, frente al parque principal. Confirma siempre el punto exacto al reservar.</p></details><details><summary>¿Puedo solicitar una experiencia privada?</summary><p>Consulta por WhatsApp. La disponibilidad depende de la fecha, número de viajeros y experiencia elegida.</p></details><details><summary>¿Qué debo llevar?</summary><p>Calzado cómodo, protección solar, agua, documento de identidad y una chaqueta ligera. En montaña el clima puede cambiar.</p></details></div></div></section>
+
+<section class="final-cta section"><div class="final-cta-photo"><img src="images/optimized/NMqqAvpDA4lTbDAIGqdnD_y7Ugu6an33buyarsa3OnMrM2pJCPkGMo3HaP69Ql7bxGGWt-75DtP1G0GKQKC2SoAAwT9t_QazsoG0AsRe3Dg1w0jaHcoo7vvfZY9NnnNnSwnIUFR0i3ToGuHzdqZowdePRujDslDjflnu1gEqzBeLN_Hp2Zrmc8mCJglotTCX.webp" alt="Paisaje del Valle de Cocora"></div><div class="final-cta-shade"></div><div class="container final-cta-content"><span class="eyebrow light">TU PRÓXIMA HISTORIA EMPIEZA AQUÍ</span><h2>Nos vemos<br><em>en Salento.</em></h2><a class="btn btn-accent btn-large" href="https://wa.me/573117388259?text=Hola%20Salento%20Tours%20Mountain%2C%20quiero%20reservar%20una%20experiencia." target="_blank" rel="noopener">Reservar por WhatsApp ↗</a><p>Respuesta directa · Salento, Quindío · Colombia</p></div></section>
+</main>
+
+<footer class="footer"><div class="container footer-grid"><div><a class="brand footer-brand" href="#inicio"><span class="brand-emblem">S</span><span class="brand-copy"><strong>Salento Tours</strong><small>Mountain · Quindío</small></span></a><p>Experiencias locales de naturaleza, café y montaña.</p></div><div><strong>Explora</strong><a href="#tour-estrella">Experiencia principal</a><a href="#tours">Todos los tours</a><a href="#galeria">Galería</a><a href="#faq">FAQ</a></div><div><strong>Legal</strong><a href="privacy.html">Privacidad</a><a href="terms.html">Términos y condiciones</a></div><div><strong>Reserva</strong><a href="https://wa.me/573117388259" target="_blank" rel="noopener">WhatsApp</a><span>+57 311 738 8259</span><span>Salento, Quindío · Colombia</span></div></div><div class="container footer-bottom"><span>© <span id="year"></span> Salento Tours Mountain</span><span>Diseñado para vender experiencias, no solo destinos.</span></div></footer>
+
+<a class="whatsapp-float" href="https://wa.me/573117388259?text=Hola%20Salento%20Tours%20Mountain%2C%20quiero%20informaci%C3%B3n%20sobre%20los%20tours." target="_blank" rel="noopener" aria-label="Contactar por WhatsApp"><span>WhatsApp</span>↗</a>
+<div class="mobile-book"><span><b>¿Listo para viajar?</b><small>Reserva directo por WhatsApp</small></span><a href="https://wa.me/573117388259?text=Hola%20Salento%20Tours%20Mountain%2C%20quiero%20reservar%20un%20tour." target="_blank" rel="noopener">Reservar ↗</a></div>
+
+<div class="modal" id="tourModal" aria-hidden="true"><div class="modal-backdrop" data-close></div><div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="modal-close" data-close aria-label="Cerrar">×</button><div class="modal-gallery"><img id="modalImage" src="" alt=""><button class="modal-arrow prev" id="prevImage" aria-label="Anterior">‹</button><button class="modal-arrow next" id="nextImage" aria-label="Siguiente">›</button><div class="modal-thumbs" id="modalThumbs"></div></div><div class="modal-content"><div class="tour-meta" id="modalMeta"></div><span class="eyebrow" id="modalCategory"></span><h2 id="modalTitle"></h2><p id="modalDescription"></p><div class="modal-columns"><div><h4>Itinerario</h4><div class="itinerary" id="modalItinerary"></div></div><div><h4>Incluye</h4><ul id="modalIncludes"></ul><h4 class="not-title">No incluye</h4><ul id="modalNotIncludes"></ul></div></div><a class="btn btn-accent" id="modalWhatsapp" target="_blank" rel="noopener">Consultar y reservar ↗</a></div></div></div>
+<script src="app.js"></script>
+</body>
+</html>

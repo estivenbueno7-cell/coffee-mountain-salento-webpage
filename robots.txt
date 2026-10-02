@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://salento-tours-mountain.netlify.app/sitemap.xml
